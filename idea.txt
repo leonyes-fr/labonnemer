@@ -19,3 +19,5 @@ choper les icones fontawesome des reseaux.
 faire icones poisson bouteille  conserves et hamecon maori
 
 slogan "bonne depuis 1983 !
+
+vérifier attaque injection js dans texte form

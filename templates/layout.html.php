@@ -26,7 +26,7 @@
                 <li><a href="#">Poissons</a></li>
                 <li><a href="#">Coquillages</a></li>
                 <li><a href="#">Conserves</a></li>
-                <li><a href="#">Pastis!</a></li>
+                <li><a href="#">Ricard!</a></li>
             </ul>
         </nav>
 	</header>	

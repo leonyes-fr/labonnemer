@@ -15,7 +15,7 @@ class Application {
 
         
         if(!empty($_GET['task'])) {
-            // la superglobale get task va s affecter a $task. cela correspondra à l'action à effectuer/ méthode à lancer...
+            // la superglobale GET task va s affecter a $task. cela correspondra à l'action à effectuer/ méthode à lancer...
             $task = $_GET['task'];
         }
 
