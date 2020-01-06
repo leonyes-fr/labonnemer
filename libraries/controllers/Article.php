@@ -8,12 +8,9 @@ class Article extends Controller {
     protected $modelName = "\Models\Article";
 
     public function index(){
-        //recuperation des articles.
-       
-        $articles = $this->model->findAll("created_at DESC");
         // Affichage
         $pageTitle = "Accueil";
-        \Renderer::render('articles/index', compact('pageTitle', 'articles'));
+        \Renderer::render('index', compact('pageTitle'));
                 
     }
 

@@ -10,7 +10,7 @@ class Renderer {
         require('templates/' .$path . '.html.php');
         $pageContent = ob_get_clean();
 
-        require('templates/layout.html.php');
+        require_once('templates/layout.html.php');
     }
 
 }

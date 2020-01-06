@@ -17,3 +17,5 @@ mouette qui passe de gauche a droite.
 choper les icones fontawesome des reseaux.
 
 faire icones poisson bouteille  conserves et hamecon maori
+
+slogan "bonne depuis 1983 !
