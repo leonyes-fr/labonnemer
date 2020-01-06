@@ -1,0 +1,19 @@
+Site de vente de produits de la mediterrannée.
+techno vanilla js php
+"La bonne mer".
+
+
+section poisson, coquillages, conserves, pastis!
+
+
+font open sans
+
+Apres chaques virgule ou point, rajouter en css:
+putaing
+cong
+
+mouette qui passe de gauche a droite.
+
+choper les icones fontawesome des reseaux.
+
+faire icones poisson bouteille  conserves et hamecon maori
