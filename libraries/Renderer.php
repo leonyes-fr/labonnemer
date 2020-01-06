@@ -1,8 +1,8 @@
 <?php
 
+ //La classe renderer stock dans un tampon le contenu à intégrer au layout.
 class Renderer {
 
-    //render('articles/show')
    public static function render(string $path, array $variables = []) {
 
         extract($variables);

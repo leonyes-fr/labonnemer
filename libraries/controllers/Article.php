@@ -7,11 +7,11 @@ class Article extends Controller {
 
     protected $modelName = "\Models\Article";
 
+    //Lance la premiére page d'acceuil du site sur le template index.html.php
     public function index(){
         // Affichage
         $pageTitle = "Accueil";
         \Renderer::render('index', compact('pageTitle'));
-                
     }
 
     public function show(){
