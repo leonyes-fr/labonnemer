@@ -33,6 +33,32 @@
     <main class="container">
         <?= $pageContent ?>
     </main>
+    <footer>
+            <article>
+                <h3>Tout sur La Bonne Mer</h3>
+                <ul>
+                    <li><a href="#">Tout sur nous</a></li>
+                    <li><a href="#">Nous trouver</a></li>
+                    <li><a href="#">Contactez-nous !</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>La garantie de la fraicheur !</h3>
+                <ul>
+                    <li><a href="#">Label</a></li>
+                    <li><a href="#">Récompenses</a></li>
+                    <li><a href="#">On parle de nous</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Suivez la lumiére du phare sur :</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </article>
+    </footer>
 
 <script src="../labonnemer/public/js/main.js"></script>
 </body>
