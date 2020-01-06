@@ -1,7 +1,7 @@
 <?php
 
 /**
- * CE FICHIER A POUR BUT D'AFFICHER LA PAGE D'ACCUEIL !
+ * CE FICHIER A POUR BUT D'AFFICHER LA PAGE D'ACCUEIL ! test
  *  Le require_once va déclencher la fonction d'autoload pour charger les classes requises automatiquement.
  *  \Application::process() lance la méthode statique d'éguillage dans la classe application dans la librairies.
  */
