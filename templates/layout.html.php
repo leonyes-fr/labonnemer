@@ -23,7 +23,7 @@
         </figure>
         <nav>
             <ul>
-                <li><a href="#">Poissons</a></li>
+                <li><a href="index.php?controller=product&task=list">Poissons</a></li>
                 <li><a href="#">Coquillages</a></li>
                 <li><a href="#">Conserves</a></li>
                 <li><a href="#">Ricard!</a></li>

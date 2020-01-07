@@ -76,11 +76,12 @@ aside ul li {
     position: relative;
 }
 
-aside ul li a {
-	transition: all 0.20s ease-in;
+aside ul li {
+	top: 0rem;
+	transition: top 0.3s ease-in-out; 
 }
-aside ul li a:hover {
-	color: red;  /* a changer */
+aside ul li:hover {
+	top: 0.5rem;
 }
 
 /* --------------------------------------------------------------------------------------------------
@@ -89,18 +90,22 @@ aside ul li a:hover {
 
 header > aside + figure {
 	position: absolute;
-	top: 0.3rem;
+	top: 0rem;
 	left: 40%;
 	transition: top 0.3s ease-out;     /* a changer  plus rapide  descente*/
 }
 
 header > aside + figure:hover {
-	top: 2.5rem;                         /* a changer  plus rapide  descente*/
+	top: 3rem;                         /* a changer  plus rapide  descente*/
 }
 
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- HEADER NAV -----------------------------------------
 -----------------------------------------------------------------------------------------------------*/
+
+header ul {
+	margin-top: 0rem;
+}
 
 nav ul {
 	display: flex;
@@ -108,12 +113,17 @@ nav ul {
 	justify-content: center;
 	height:3rem;
     font-size: 2.5rem;
-    padding: 5%;
+    padding: 5% 6% 5% 5%;
 }
 
 nav ul li:nth-child(2) {
 	margin-right: 20%;
 }
+
+nav ul li:nth-child(3) {
+	margin-left: 2%;
+}
+
 nav ul li {
 	margin-top: 1.1rem;
 	margin-right: 2.2rem;
@@ -121,11 +131,12 @@ nav ul li {
     list-style: none;
 } 
 
-nav ul li a {
-	transition: all 0.5s ease-in;
+nav ul li  {
+	top: 0rem;
+	transition: top 0.3s ease-in-out; 
 }
-nav ul li a:hover {
-	color: black;
+nav ul li:hover {
+	top: 0.5rem; 
 }
 
 /* --------------------------------------------------------------------------------------------------
@@ -151,4 +162,8 @@ body footer {
 footer article {
 	width: 30%;
 	font-size: 1.4rem;
+}
+
+li {
+	margin: 0.5rem;
 }
