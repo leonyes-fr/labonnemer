@@ -7,6 +7,7 @@
 	blague sur "c'est bulots"
 	les ajouter au panier se font au hover
 	faire une bulle "ahoy beach !"
+	faire un liseré bleu foncé sur l aside header
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -64,11 +65,15 @@ nav, aside {
     ----------------------------------------------- HEADER ASIDE ------------------------------------
 -----------------------------------------------------------------------------------------------------*/
 
+aside {
+	background-color: #033f5b;
+}
+
 aside ul {
 	display: flex;
 	flex-direction: row;
     justify-content: flex-end;
-    padding: 1.5em 1.5em 1.5em 0;
+    padding: 0.5em 1.5em 0.5em 0;
 	font-size: 1.5rem;
 }
 
@@ -149,13 +154,45 @@ nav ul li:hover {
 	margin-top: 0;
 }
 
-.product {
+.products {   /*  attention, virer le 1%margin du prems .product */
 	background-color: #60b3d5;
 	margin: 0 auto;
-	width: 90%;
+
 	height: 20%;
+	margin: 1%;
+	overflow: hidden;
 }
 
+.products img  {
+	float: left;
+	margin: 1%;
+	clear:both
+}
+
+.products h2 {
+	float: left;
+	width: 60%;
+}
+
+.products p {
+	float: left;
+	width: 50%;
+}
+
+.products em {
+	display: block;
+	margin-top: 2%;
+	font-style: normal;
+}
+
+.products a {  /*  Rajouter icone panier. */
+	background-color: #fec72f;
+	float: right;
+	width: 20%;
+	padding: 1.5%;
+	margin: 1.5%;
+	font-size: 2.5rem;
+}
 
 
 /* --------------------------------------------------------------------------------------------------
@@ -176,4 +213,8 @@ footer article {
 
 li {
 	margin: 0.5rem;
+}
+
+footer h3 {
+	color: #fec72f;
 }

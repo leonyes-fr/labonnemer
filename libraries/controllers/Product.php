@@ -7,12 +7,12 @@ class Product extends Controller {
 
     protected $modelName = "\Models\Product";
 
-    //Lance la premiére page d'acceuil du site sur le template index.html.php
+    //Lance une page produit avec tt les produits.
     public function list(){
         // Affichage
         $products = $this->model->findAll();
         $pageTitle = "Produits";
-        \Renderer::render('product', compact('pageTitle', 'products'));
+        \Renderer::render('products', compact('pageTitle', 'products'));
     }
 
 
