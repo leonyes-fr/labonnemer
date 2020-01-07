@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../labonnemer/public/css/normalize.css">
     <link rel="stylesheet" href="../labonnemer/public/css/style.css">
     <title>La Bonne Mer <?= $pageTitle ?></title>
@@ -53,9 +55,9 @@
             <article>
                 <h3>Suivez la lumiére du phare sur :</h3>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
+                    <li><a href="https://fr-fr.facebook.com/">Facebook</a></li>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
                 </ul>
             </article>
     </footer>

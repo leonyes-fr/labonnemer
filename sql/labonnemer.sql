@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 06 jan. 2020 à 19:13
--- Version du serveur :  5.7.23
--- Version de PHP :  7.2.10
+-- Généré le :  mar. 07 jan. 2020 à 19:04
+-- Version du serveur :  5.7.24
+-- Version de PHP :  7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -98,7 +98,16 @@ CREATE TABLE IF NOT EXISTS `product` (
   `prod_tva` float UNSIGNED NOT NULL DEFAULT '20',
   `prod_picture` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`prod_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `product`
+--
+
+INSERT INTO `product` (`prod_id`, `prod_name`, `prod_description`, `prod_price`, `prod_tva`, `prod_picture`) VALUES
+(7, 'sardine', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 10, 20, 'araignee.jpg'),
+(8, 'canard', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 30, 20, 'homard.jpg'),
+(9, 'langouste', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 50, 20, 'langouste.jpg');
 
 -- --------------------------------------------------------
 
