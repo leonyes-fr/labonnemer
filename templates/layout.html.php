@@ -20,9 +20,10 @@
                 <li><a href="#">Mon panier : (0)</a></li>
             </ul>	
         </aside>
-        <figure>
+        <figure class="logo">
             <a href="index.php"><img src="public/img/logo250.png" alt="logo la bonne mer"></a>
         </figure>
+        <img src="public/img/test.png" class="visible">
         <nav>
             <ul>
                 <li><a href="index.php?controller=product&task=list">Poissons</a></li>
