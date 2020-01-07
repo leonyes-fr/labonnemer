@@ -10,8 +10,9 @@ class Product extends Controller {
     //Lance la premiére page d'acceuil du site sur le template index.html.php
     public function list(){
         // Affichage
+        $products = $this->model->findAll();
         $pageTitle = "Produits";
-        \Renderer::render('product', compact('pageTitle'));
+        \Renderer::render('product', compact('pageTitle', 'products'));
     }
 
 

@@ -6,6 +6,7 @@
 	choper les icones insta etc
 	blague sur "c'est bulots"
 	les ajouter au panier se font au hover
+	faire une bulle "ahoy beach !"
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -38,7 +39,7 @@ a {
 }
 
 .container {
-	max-width: 1100px;
+	max-width: 1200px;
     margin: 0 auto;
     background-color: white;
 }
@@ -104,7 +105,8 @@ header > aside + figure:hover {
 -----------------------------------------------------------------------------------------------------*/
 
 header ul {
-	margin-top: 0rem;
+	margin: 0rem;
+
 }
 
 nav ul {
@@ -113,7 +115,7 @@ nav ul {
 	justify-content: center;
 	height:3rem;
     font-size: 2.5rem;
-    padding: 5% 6% 5% 5%;
+    padding: 6% 6% 5% 5%;
 }
 
 nav ul li:nth-child(2) {
@@ -143,8 +145,16 @@ nav ul li:hover {
     ----------------------------------------------- MAIN ------------------------------------------
 -----------------------------------------------------------------------------------------------------*/
 
+.container, h1 {
+	margin-top: 0;
+}
 
-
+.product {
+	background-color: #60b3d5;
+	margin: 0 auto;
+	width: 90%;
+	height: 20%;
+}
 
 
 
