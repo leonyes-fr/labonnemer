@@ -1,10 +1,11 @@
-/*  bleu foncé 016fa0 
+/* 
+	todo:
+	bleu foncé 016fa0 
 	bleu clair 60b3d5
-	faire un slider en page d'index.
-	chercher font et images diverses d habillage
-	chercher la base sql de cupoftea
 	icone cart dans les produits a coté acheté
 	les ajouter au panier se font au hover
+	attention au bulletest.png provisoir.
+	baisser la taille des fleches du slider.
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -108,7 +109,7 @@ aside + figure:hover {
 figure + img {
 	position: absolute;
 	top: 0rem;
-	
+	left: 52%;
 	
 }
 
@@ -187,6 +188,7 @@ nav ul li:hover {
 }
 
 .products p {
+	margin: 0 0 0 2%;
 	float: left;
 	width: 55%;
 }
@@ -195,6 +197,7 @@ nav ul li:hover {
 	display: block;
 	margin-top: 2%;
 	font-style: normal;
+	font-size: 1.8rem;
 }
 
 .products a {  /*  Rajouter icone panier. */
@@ -209,9 +212,24 @@ nav ul li:hover {
 }
 
 
-main p {
+.home p {
 	text-align: left;
 }
+
+#slider-previous{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	font-size: 4rem;
+}
+
+#slider-next {
+	position: absolute;
+	top: 50%;
+	right: 20%;
+	font-size: 4rem;
+}
+
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FOOTER LISTE -------------------------------------
 -----------------------------------------------------------------------------------------------------*/

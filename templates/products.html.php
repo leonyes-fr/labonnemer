@@ -7,7 +7,7 @@
     <h3>Origine: <?= $product['prod_origin'] ?></h3>
     <p><?=  $product['prod_synopsis'] ?></p>
     <em>Prix : <?=  $product['prod_price'] ?> Euros </em>
-    <a href="test">acheter</a>
+    <a href="test">decouvrir</a>
 </article>
 
 <?php endforeach ?>
