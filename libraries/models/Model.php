@@ -42,4 +42,12 @@ abstract class Model
         $item = $resultats->fetchAll();
         return $item;
     }
+
+    public function findAllByCategory(int $category)
+    {
+        $query = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE prod_category = :prod_category");
+        $query->execute(['prod_category' => $category]);
+        $item = $query->fetchAll();
+        return $item;
+    }
 }

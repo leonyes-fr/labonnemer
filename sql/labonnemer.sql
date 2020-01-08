@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 07 jan. 2020 à 19:04
+-- Généré le :  mer. 08 jan. 2020 à 10:11
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -21,6 +21,23 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `labonnemer`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cart`
+--
+
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE IF NOT EXISTS `cart` (
+  `car_id` int(10) NOT NULL AUTO_INCREMENT,
+  `car_cust_id` int(10) NOT NULL,
+  `car_prod_id` int(10) NOT NULL,
+  `car_prod_quantity` int(10) NOT NULL,
+  `car_prod_price` int(10) NOT NULL,
+  `car_status` varchar(50) NOT NULL,
+  PRIMARY KEY (`car_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -47,45 +64,6 @@ CREATE TABLE IF NOT EXISTS `customer` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `order`
---
-
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE IF NOT EXISTS `order` (
-  `ord_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `ord_date` datetime DEFAULT NULL,
-  `ord_status` int(11) NOT NULL DEFAULT '0',
-  `ord_datePayment` date DEFAULT NULL,
-  `ord_dateShipped` date DEFAULT NULL,
-  `ord_comment` text,
-  `customer_cust_id` int(10) UNSIGNED NOT NULL,
-  PRIMARY KEY (`ord_id`),
-  KEY `fk_order_customer_idx` (`customer_cust_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `orderdetail`
---
-
-DROP TABLE IF EXISTS `orderdetail`;
-CREATE TABLE IF NOT EXISTS `orderdetail` (
-  `ordd_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `ordd_quantity` int(11) DEFAULT NULL,
-  `ordd_price` double DEFAULT NULL,
-  `order_ord_id` int(10) UNSIGNED NOT NULL,
-  `product_prod_id` int(10) UNSIGNED NOT NULL,
-  `productvariation_prodv_id` int(10) UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (`ordd_id`),
-  KEY `fk_orderDetail_order1_idx` (`order_ord_id`),
-  KEY `fk_orderDetail_product1_idx` (`product_prod_id`),
-  KEY `fk_orderdetail_productvariation1_idx` (`productvariation_prodv_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `product`
 --
 
@@ -93,10 +71,12 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
   `prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `prod_name` varchar(255) DEFAULT NULL,
+  `prod_origin` varchar(100) NOT NULL,
+  `prod_synopsis` text NOT NULL,
   `prod_description` text,
   `prod_price` double UNSIGNED DEFAULT NULL,
-  `prod_tva` float UNSIGNED NOT NULL DEFAULT '20',
   `prod_picture` varchar(255) DEFAULT NULL,
+  `prod_category` varchar(100) NOT NULL,
   PRIMARY KEY (`prod_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
@@ -104,51 +84,10 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- Déchargement des données de la table `product`
 --
 
-INSERT INTO `product` (`prod_id`, `prod_name`, `prod_description`, `prod_price`, `prod_tva`, `prod_picture`) VALUES
-(7, 'sardine', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 10, 20, 'araignee.jpg'),
-(8, 'canard', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 30, 20, 'homard.jpg'),
-(9, 'langouste', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 50, 20, 'langouste.jpg');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `productvariation`
---
-
-DROP TABLE IF EXISTS `productvariation`;
-CREATE TABLE IF NOT EXISTS `productvariation` (
-  `prodv_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `prodv_name` varchar(255) DEFAULT NULL,
-  `prodv_price` double DEFAULT NULL,
-  `prodv_quantity` int(11) DEFAULT NULL,
-  `product_prod_id` int(10) UNSIGNED NOT NULL,
-  PRIMARY KEY (`prodv_id`),
-  KEY `fk_productVariation_product1_idx` (`product_prod_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
-
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `order`
---
-ALTER TABLE `order`
-  ADD CONSTRAINT `fk_order_customer` FOREIGN KEY (`customer_cust_id`) REFERENCES `customer` (`cust_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Contraintes pour la table `orderdetail`
---
-ALTER TABLE `orderdetail`
-  ADD CONSTRAINT `fk_orderDetail_order1` FOREIGN KEY (`order_ord_id`) REFERENCES `order` (`ord_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_orderDetail_product1` FOREIGN KEY (`product_prod_id`) REFERENCES `product` (`prod_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_orderdetail_productvariation1` FOREIGN KEY (`productvariation_prodv_id`) REFERENCES `productvariation` (`prodv_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Contraintes pour la table `productvariation`
---
-ALTER TABLE `productvariation`
-  ADD CONSTRAINT `fk_productVariation_product1` FOREIGN KEY (`product_prod_id`) REFERENCES `product` (`prod_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+INSERT INTO `product` (`prod_id`, `prod_name`, `prod_origin`, `prod_synopsis`, `prod_description`, `prod_price`, `prod_picture`, `prod_category`) VALUES
+(7, 'sardine', 'Vieux port de Marseille', '', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 10, 'araignee.jpg', ''),
+(8, 'canard', 'Estque plage', '', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 30, 'homard.jpg', ''),
+(9, 'langouste', 'Port Miou Miou', '', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus similique odio recusandae ratione inventore sunt. Doloribus exercitationem possimus iste, quis sit at fuga, commodi assumenda delectus similique hic, a fugiat.', 50, 'langouste.jpg', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

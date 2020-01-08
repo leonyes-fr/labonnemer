@@ -21,15 +21,15 @@
             </ul>	
         </aside>
         <figure class="logo">
-            <a href="index.php"><img src="public/img/logo250.png" alt="logo la bonne mer"></a>
+            <a href="index.php"><img src="public/img/visuals/logo250.png" alt="logo la bonne mer"></a>
         </figure>
-        <img src="public/img/test.png" class="visible">
+        <img src="public/img/visuals/bulle.png" class="visible">
         <nav>
             <ul>
-                <li><a href="index.php?controller=product&task=list">Poissons</a></li>
-                <li><a href="#">Coquillages</a></li>
-                <li><a href="#">Conserves</a></li>
-                <li><a href="#">Ricard!</a></li>
+                <li><a href="index.php?controller=product&task=list&category=1">Crustaces</a></li>
+                <li><a href="index.php?controller=product&task=list&category=2">Coquillages</a></li>
+                <li><a href="index.php?controller=product&task=list&category=3">Conserves</a></li>
+                <li><a href="index.php?controller=product&task=list&category=4">Ricard!</a></li>
             </ul>
         </nav>
 	</header>	

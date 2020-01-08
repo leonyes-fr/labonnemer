@@ -170,7 +170,7 @@ nav ul li:hover {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.products {   /*  attention, virer le 1%margin du prems .product */
+.products {   /*  attention, penser a virer le 1%margin du prems .product */
 	background-color: #60b3d5;
 	margin: 0 auto;
 	border-radius: 2%;

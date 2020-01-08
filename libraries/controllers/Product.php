@@ -10,7 +10,7 @@ class Product extends Controller {
     //Lance une page produit avec tt les produits.
     public function list(){
         // Affichage
-        $products = $this->model->findAll();
+        $products = $this->model->findAllByCategory($_GET['category']);
         $pageTitle = "Produits";
         \Renderer::render('products', compact('pageTitle', 'products'));
     }
