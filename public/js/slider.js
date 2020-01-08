@@ -5,19 +5,19 @@ let imgCollect=    //Initialisation d'une collection avec deux propriétés par 
 [
     {
         src: 'public/img/slider/1.jpg',
-        legend: 'Je t aime'
+        legend: '"J aime la mer"'
     },
     {
         src: 'public/img/slider/2.jpg',
-        legend: 'Bonne journée !'
+        legend: 'Plateau de dégustation'
     },
     {
         src: 'public/img/slider/3.jpg',
-        legend: 'Tu est si mignon !'
+        legend: 'Pour l aperitif'
     },
     {
         src: 'public/img/slider/4.jpg',
-        legend: 'Paix intérieur!'
+        legend: 'Ou en dessert'
     }
 ];
 
@@ -80,7 +80,7 @@ function onClickNext() {
 function onClickPlay() {
     if ( stopPlay == false)
     {
-        interval = setInterval(onClickNext, 1000);
+        interval = setInterval(onClickNext, 3000);
         stopPlay = true;
     }else 
     {
@@ -100,8 +100,9 @@ document.addEventListener('DOMContentLoaded', function(){
     position = 0;
     stopPlay = false;
 
+    onClickPlay();
     visibleLegend = document.querySelector('.caption');
-    visiblePicture = document.querySelector('#slider img');
+    visiblePicture = document.querySelector('#slider');
     previousButton = document.querySelector('#slider-previous');
     nextButton = document.querySelector('#slider-next');
     playButton = document.querySelector('#slider-toggle');
