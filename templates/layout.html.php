@@ -23,7 +23,7 @@
         <figure class="logo">
             <a href="index.php"><img src="public/img/visuals/logo250.png" alt="logo la bonne mer"></a>
         </figure>
-        <img src="public/img/visuals/bulle.png" class="visible">
+        <img src="public/img/visuals/bulle.png" class="visible" alt="bulle au survol du logo.">
         <nav>
             <ul>
                 <li><a href="index.php?controller=product&task=list&category=1">Crustaces</a></li>

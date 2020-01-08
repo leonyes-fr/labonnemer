@@ -3,12 +3,8 @@
 	faire un slider en page d'index.
 	chercher font et images diverses d habillage
 	chercher la base sql de cupoftea
-	choper les icones insta etc
-	blague sur "c'est bulots"
+	icone cart dans les produits a coté acheté
 	les ajouter au panier se font au hover
-	faire une bulle "ahoy beach !"
-	faire un liseré bleu foncé sur l aside header
-	rajouter origine poisson
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -213,6 +209,9 @@ nav ul li:hover {
 }
 
 
+main p {
+	text-align: left;
+}
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FOOTER LISTE -------------------------------------
 -----------------------------------------------------------------------------------------------------*/
