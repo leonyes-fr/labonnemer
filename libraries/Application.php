@@ -5,7 +5,7 @@ class Application {
 
     public static function process()
     {
-        $controllerName = "Article";  // Ou taper comme controlleur.
+        $controllerName = "Home";  // Ou taper comme controlleur.
         $task = "index";              // Ou taper comme requete/tâche.
 
         if(!empty($_GET['controller'])) {
