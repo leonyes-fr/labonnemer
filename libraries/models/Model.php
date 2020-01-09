@@ -13,13 +13,6 @@ abstract class Model
         $this->pdo = \Database::getPdo();
     }
 
-    
-
-    public function delete(int $id): void {
-        $query = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id = :id");
-        $query->execute(['id' => $id]);
-    }
-
      /**
      * retourne la liste des articles classés par date de création.
      * 

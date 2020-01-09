@@ -1,12 +1,12 @@
 <article class="home">
     <h1>Découvrez les festins de la mer.</h1>
         <img src="public/img/slider/1.jpg" alt="Sélction de plats."  id="slider" class="slider"><br>
-        <p class="caption">L'amour de la mer.</p>
+            <p class="caption">L'amour de la mer.</p>
         <img src="public/img/visuals/left.png" id="slider-previous">
         <img src="public/img/visuals/right.png" id="slider-next">
     <section>
         <h2>Goutez la mer.</h2>
-            <img src="public/img/visuals/feuille.jpg" alt="feuilles d'huitre.">
+                <img src="public/img/visuals/feuille.jpg" alt="feuilles d'huitre.">
             <p>C'est pas l'homme qui prend la mer
                 C'est la mer qui prend l'homme, <strong>tatatin</strong>
                 Moi, la mer, elle m'a pris
@@ -63,7 +63,7 @@
                 Je suis femme et quand on est femme
                 On n'achète pas ces choses-là
             </p>
-            <img src="public/img/visuals/pince.jpg" alt="pince à huitre">
+                <img src="public/img/visuals/pince.jpg" alt="pince à huitre">
     </section>
 </article>
 <script src="../labonnemer/public/js/slider.js"></script>
