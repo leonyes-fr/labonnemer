@@ -5,7 +5,7 @@
 	icone cart dans les produits a coté acheté
 	les ajouter au panier se font au hover
 	attention au bulletest.png provisoir.
-	baisser la taille des fleches du slider.
+	placer les icones conserves et ricard
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -178,16 +178,16 @@ article h1:first-child {
 	color: #fec72f;
 }
 
-.home h2 {
+.home h2 , .product h1 {
 	font-size: 2.8rem;
 	color: #fec72f;
 	width: 100%;
 }
 
-.home h2:after, .home h1:after {
+.home h2:after, .home h1:after , .product h1 {
 	content: "";
 	display: block;
-	border: 1px solid #fec72f;
+	border-bottom : 1px solid #fec72f;
 }
 
 .home section{

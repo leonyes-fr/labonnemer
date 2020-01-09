@@ -8,11 +8,11 @@ class Product extends Controller {
     protected $modelName = "\Models\Product";
 
     //Lance une page produit avec tt les produits.
-    public function list(){
+    public function find(){
         // Affichage
-        $products = $this->model->findAllByCategory($_GET['category']);
-        $pageTitle = "Produits";
-        \Renderer::render('products', compact('pageTitle', 'products'));
+        $product = $this->model->findOne($_GET['id']);
+        $pageTitle = "Produit";
+        \Renderer::render('product', compact('pageTitle', 'product'));
     }
 
 

@@ -8,11 +8,11 @@ class Product extends Model {
 
     protected $table = "product";
 
-    public function findOne(int $article_id) : array{
-        $query = $this->pdo->prepare("SELECT * FROM product WHERE article_id = :article_id");
-        $query->execute(['article_id' => $article_id]);
-        $commentaires = $query->fetchAll();
-        return $commentaires;
+    public function findOne(int $product) {
+        $query = $this->pdo->prepare("SELECT * FROM product WHERE prod_id = :prod_id");
+        $query->execute(['prod_id' => $product]);
+        $product = $query->fetch();
+        return $product;
     }
 
    

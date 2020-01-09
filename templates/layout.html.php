@@ -26,10 +26,10 @@
         <img src="public/img/visuals/bulletest.png" class="visible" alt="bulle au survol du logo.">
         <nav>
             <ul>
-                <li><a href="index.php?controller=product&task=list&category=1">Crustaces</a></li>
-                <li><a href="index.php?controller=product&task=list&category=2">Coquillages</a></li>
-                <li><a href="index.php?controller=product&task=list&category=3">Conserves</a></li>
-                <li><a href="index.php?controller=product&task=list&category=4">Ricard!</a></li>
+                <li><a href="index.php?controller=products&task=list&category=1">Crustaces</a></li>
+                <li><a href="index.php?controller=products&task=list&category=2">Coquillages</a></li>
+                <li><a href="index.php?controller=products&task=list&category=3">Conserves</a></li>
+                <li><a href="index.php?controller=products&task=list&category=4">Ricard!</a></li>
             </ul>
         </nav>
 	</header>	
