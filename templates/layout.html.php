@@ -16,7 +16,7 @@
     <header>
         <aside>
             <ul>
-                <li><a href="#">connexion</a></li>
+                <li><a href="#">Compte</a></li>
                 <li><a href="#">Mon panier : (0)</a></li>
             </ul>	
         </aside>

@@ -2,11 +2,11 @@
 
 namespace Models;
 
-
 abstract class Model 
 {
     protected $pdo;
     protected $table;
+
     // A l'appel du constructeur de la classe mére Model, on lance une unique instance de PDO.
     public function __construct()
     {

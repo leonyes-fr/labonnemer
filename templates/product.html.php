@@ -6,7 +6,7 @@
         <em>Prix : <?=  $product['prod_price'] ?> Euros </em>
             <label>Quantité voulue:</label>
                 <input type="number" id="quantity" name="quantity" min="1" max="10">
-        <a href="index.php?controller=product&task=find&category=1&id=<?=  $product['prod_id'] ?>">Ajouter au panier</a>
+        <a href="<?=  $product['prod_id'] ?>">Ajouter au panier</a>
     </section>
     
 </article>

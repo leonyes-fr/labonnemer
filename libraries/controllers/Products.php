@@ -7,11 +7,10 @@ class Products extends Controller {
 
     protected $modelName = "\Models\Products";
 
-    //Lance une page produit avec tt les produits.
+    //Lance une page produits avec tt les produits de la catégorie choisis.
     public function list(){
-        // Affichage
         $products = $this->model->findAllByCategory($_GET['category']);
-        $pageTitle = "Produits";
+        $pageTitle = "Liste des produits";
         \Renderer::render('products', compact('pageTitle', 'products'));
     }
 

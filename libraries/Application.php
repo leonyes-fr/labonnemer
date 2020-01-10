@@ -5,8 +5,8 @@ class Application {
 
     public static function process()
     {
-        $controllerName = "Home";  // Ou taper comme controlleur.
-        $task = "index";              // Ou taper comme requete/tâche.
+        $controllerName = "Home";  //Le controlleur appelé, Home par défaut au lancement du site.
+        $task = "index";              // La tâche/requete appelé, index par défaut.
 
         if(!empty($_GET['controller'])) {
             //exemple :  GET => article deviendra Article grace a ucfirst. Afin de taper dans la classe controlleur qui commence par une maj.

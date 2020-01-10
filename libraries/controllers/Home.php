@@ -9,7 +9,6 @@ class Home extends Controller {
 
     //Lance la premiére page d'acceuil du site sur le template index.html.php
     public function index(){
-        // Affichage
         $pageTitle = "Accueil";
         \Renderer::render('index', compact('pageTitle'));
     }

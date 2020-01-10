@@ -7,11 +7,10 @@ class Product extends Controller {
 
     protected $modelName = "\Models\Product";
 
-    //Lance une page produit avec tt les produits.
+    //Lance la page produit avec le produit passé en chaine de requete.
     public function find(){
-        // Affichage
         $product = $this->model->findOne($_GET['id']);
-        $pageTitle = "Produit";
+        $pageTitle = "Produit ". $product['prod_name'];
         \Renderer::render('product', compact('pageTitle', 'product'));
     }
 
