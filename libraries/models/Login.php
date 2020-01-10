@@ -4,9 +4,9 @@ namespace Models;
 
 require_once('libraries/autoload.php');
 
-class Product extends Model {
+class Login extends Model {
 
-    protected $table = "product";
+    protected $table = "customer";
 
     public function findOne(int $product) {
         $query = $this->pdo->prepare("SELECT * FROM product WHERE prod_id = :prod_id");

@@ -4,12 +4,12 @@ namespace Models;
 
 require_once('libraries/autoload.php');
 
-class Product extends Model {
+class Cart extends Model {
 
-    protected $table = "product";
+    protected $table = "cart";
 
     public function findOne(int $product) {
-        $query = $this->pdo->prepare("SELECT * FROM product WHERE prod_id = :prod_id");
+        $query = $this->pdo->prepare("SELECT * FROM cart WHERE prod_id = :prod_id");
         $query->execute(['prod_id' => $product]);
         $product = $query->fetch();
         return $product;

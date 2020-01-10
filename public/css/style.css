@@ -185,7 +185,7 @@ article h1:first-child {
 	width: 100%;
 }
 
-.home h2:after, .home h1:after , .product h1 {
+.home h2:after, .home h1:after , .product h1 , .login h1 , .create h1{
 	content: "";
 	display: block;
 	border-bottom : 1px solid #fec72f;
@@ -258,7 +258,7 @@ h2:nth-child(even) {
 	font-size: 1.8rem;
 }
 
-.products a , .product a {  /*  Rajouter icone panier. */
+.products a , .product a , .login a {  /*  Rajouter icone panier. */
 	background-color: #fec72f;
 	text-transform: uppercase;
 	width: 15%;
@@ -325,6 +325,41 @@ h2:nth-child(even) {
 	font-size: 3.5rem;
 	color:  #fec72f;
 }
+
+/* -------------------- page login /create ------------ */
+
+.login , .create {
+	font-size: 2rem;
+}
+
+.login , .login h2 , .create{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.login h1 , .create h1{
+	font-size: 3.2rem;
+	color: #fec72f;
+	text-align: left;
+}
+
+.login input[type=submit] , .create input[type=submit] {
+	background-color: #fec72f;
+	color: white;
+	text-transform: uppercase;
+	margin: 2%;
+	padding: 1%;
+	font-size: 2.5rem;
+	border-radius: 4%;
+	border: none;
+}
+
+.login a {
+line-height: 4;
+}
+
+/* -------------------- page cart ------------ */
+
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FOOTER LISTE -------------------------------------
 -----------------------------------------------------------------------------------------------------*/
