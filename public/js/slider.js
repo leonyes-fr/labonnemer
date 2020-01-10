@@ -24,14 +24,9 @@ let imgCollect=    //Initialisation d'une collection avec deux propriétés par 
 
 let nextButton;
 let previousButton;
-let playButton;
 let visibleLegend;
 let visiblePicture;
 let position;
-let stopPlay;
-let interval;
-let pressPreviousButton;
-let pressNextButton;
 
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FONCTIONS ------------------------------------------
@@ -49,7 +44,7 @@ function updatePicture ()
 }
 
 /**
- * déclenchement bouton précédent
+ * déclenchement images précédentes
  * @returns {void}
  */
 function onClickPrevious() {
@@ -62,7 +57,7 @@ function onClickPrevious() {
 }
 
 /**
- * déclenchement bouton suivant
+ * déclenchement images suivantes
  * @returns {void}
  */
 function onClickNext() {
@@ -75,19 +70,11 @@ function onClickNext() {
 }
 
 /**
- * déclenchement bouton lecture
+ * déclenchement du slider
  * @returns {void}
  */
-function onClickPlay() {
-    if ( stopPlay == false)
-    {
-        interval = setInterval(onClickNext, 3000);
-        stopPlay = true;
-    }else 
-    {
-        clearInterval(interval);
-        stopPlay = false;
-    }  
+function onLoadedPage() {
+    setInterval(onClickNext, 3000);
 }
 
 
@@ -99,24 +86,19 @@ function onClickPlay() {
 document.addEventListener('DOMContentLoaded', function(){
     // DEBUT DU PROGRAMME. INITIALISATION
     position = 0;
-    stopPlay = false;
 
-    onClickPlay();
+    onLoadedPage();
     visibleLegend = document.querySelector('.caption');
     visiblePicture = document.querySelector('#slider');
     previousButton = document.querySelector('#slider-previous');
     nextButton = document.querySelector('#slider-next');
-    playButton = document.querySelector('#slider-toggle');
 
-    
-
-    // boutons imiaouge précédente et suivante.
+    // Evenements sur les boutons images précédente et suivante.
     previousButton.addEventListener('click',onClickPrevious);
     nextButton.addEventListener('click',onClickNext);
 
-    //lance le diaporama.
-    playButton.addEventListener('load',onClickPlay);
-
+    //lance le slider au chargement de la page.
+    document.addEventListener('load',onLoadedPage);
 
 });
 

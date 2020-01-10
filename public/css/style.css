@@ -198,7 +198,6 @@ article h1:first-child {
 
 .home p {
 	text-align: left;
-	font-size: 2.4rem;
 	padding: 0 1% 0 1%;
 	margin: 0;
 	font-size: 2rem;
@@ -259,15 +258,18 @@ h2:nth-child(even) {
 	font-size: 1.8rem;
 }
 
-.products a {  /*  Rajouter icone panier. */
+.products a , .product a {  /*  Rajouter icone panier. */
 	background-color: #fec72f;
 	text-transform: uppercase;
-	float: right;
 	width: 15%;
 	margin: 1%;
 	padding: 1%;
 	font-size: 2.5rem;
 	border-radius: 4%;
+}
+
+.products a { /* Spécifique a page produits.*/
+	float: right;
 }
 
 #slider-previous{
@@ -284,11 +286,45 @@ h2:nth-child(even) {
 	font-size: 4rem;
 }
 
-/* -------------------- page accueil ------------ */
+/* -------------------- page product ------------ */
 
+.product {
+	display: flex;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+}
 
+.product h1 {
+	text-align: right;
+}
 
+.product section {
+	width: 45%;
+}
 
+.product p {
+	font-size: 2rem;
+	line-height: 2;
+}
+
+.product a {
+	padding: 1% 1.8% 1% 1.8%;
+}
+
+.product label {
+	font-size: 2rem;
+}
+
+.product input {
+	font-size: 2rem;
+}
+
+.product em {
+	display: block;
+	font-size: 3.5rem;
+	color:  #fec72f;
+}
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FOOTER LISTE -------------------------------------
 -----------------------------------------------------------------------------------------------------*/
