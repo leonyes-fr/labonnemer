@@ -10,8 +10,10 @@ class Create extends Controller {
     //Lance la page de création de compte.
     public function index(){
         $pageTitle = "Création d'un nouveau compte.";
+        $accountName = $this->accountName;
+        $disconnect = $this->disconnect;
         $errors= [];
-        \Renderer::render('create', compact('pageTitle', 'errors'));
+        \Renderer::render('create', compact('pageTitle', 'errors', 'accountName', 'disconnect'));
     }
 
     //Va rajouter un nouvel utilisateur en bdd via le modele correspondant (create).

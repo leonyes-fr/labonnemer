@@ -10,8 +10,10 @@ class Login extends Controller {
 
     public function index(){
         $pageTitle = "Page de connexion";
+        $accountName = $this->accountName;
+        $disconnect = $this->disconnect;
         $error = "";
-        \Renderer::render('login', compact('pageTitle', 'error'));
+        \Renderer::render('login', compact('pageTitle', 'error', 'disconnect', 'accountName'));
     }
 
     public function getlogin(){
@@ -23,8 +25,7 @@ class Login extends Controller {
             $password = $_POST['password'];
             $statusLogin = $this->model->getlogin(compact('email', 'password'));
             if($statusLogin == "ok"){
-                $pageTitle = "Page d'accueil";
-                \Renderer::render('index', compact('pageTitle'));
+                \Http::redirect("index.php");
             }else{
                 $error = "Erreur! Login ou mot de passe non valide.";
                 $pageTitle = "Page de connexion";

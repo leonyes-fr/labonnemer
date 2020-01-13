@@ -9,12 +9,13 @@ class Home extends Controller {
 
     protected $modelName = "\Models\Home";
 
-    //Lance la premiére page d'acceuil du site sur le template index.html.php
+    //Lance la premiére page d'accueil du site sur le template index.html.php
     public function index(){
-        $user = $this->status();
+        $accountName = $this->accountName;
+        $disconnect = $this->disconnect;
         $pageTitle = "Accueil";
         
-        \Renderer::render('index', compact('pageTitle', 'user'));
+        \Renderer::render('index', compact('pageTitle', 'disconnect', 'accountName'));
     }
 
 

@@ -16,7 +16,8 @@
     <header>
         <aside>
             <ul>
-                <li><a href="index.php?controller=login">Compte <?php echo $user['lastname']; ?></a></li>
+                <li><?= $accountName?></li><!-- Affiche le prénom, si loggé. !-->
+                <li><?= $disconnect; ?></li><!-- Propose la déconnexion, si loggé  !-->
                 <li><a href="index.php?controller=cart">Mon panier : (0)</a></li>
             </ul>	
         </aside>
@@ -38,6 +39,7 @@
     </main>
     <footer>
             <article>
+                <!-- Liens en placeholder !-->
                 <h3>Tout sur La Bonne Mer</h3>
                 <ul>
                     <li><a href="#">Tout sur nous</a></li>
