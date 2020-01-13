@@ -10,8 +10,9 @@ class Products extends Controller {
     //Lance une page produits avec tt les produits de la catégorie choisis.
     public function list(){
         $products = $this->model->findAllByCategory($_GET['category']);
+        $user = $this->status();
         $pageTitle = "Liste des produits";
-        \Renderer::render('products', compact('pageTitle', 'products'));
+        \Renderer::render('products', compact('pageTitle','user', 'products'));
     }
 
 

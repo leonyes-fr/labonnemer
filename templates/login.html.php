@@ -12,7 +12,7 @@
                     <p>Valider votre connexion:</p>
             <input type="submit" value="Valider"/>
             </form>
-
+         <span><?php echo $error ?> </span>
     </section>
 
     <section>

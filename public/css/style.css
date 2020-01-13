@@ -7,6 +7,8 @@
 	mouette qui passe de gauche a droite.
 	faire icones poisson bouteille  conserves et hamecon maori
 	vérifier attaque injection js dans texte form
+	faire fonction status pour la session dans le controller.
+	L AMELIORER EN LA MONTANT DANS LA CLASSE MERE COMME UNE VARIABLE ACCESIBLE PARTOUT..
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -171,7 +173,7 @@ nav ul li:hover {
 }
 
 article h1:first-child {
-	padding-top: 1%;
+	padding-top: 2%;
 }
 
 .home h1 {
@@ -358,7 +360,7 @@ h2:nth-child(even) {
 line-height: 4;
 }
 
-.create span {
+.create span, .login span {
 	display: block;
 	color:red;
 }

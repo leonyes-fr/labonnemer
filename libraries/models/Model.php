@@ -44,4 +44,5 @@ abstract class Model
         $item = $query->fetchAll();
         return $item;
     }
+
 }

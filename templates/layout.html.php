@@ -16,7 +16,7 @@
     <header>
         <aside>
             <ul>
-                <li><a href="index.php?controller=login">Compte</a></li>
+                <li><a href="index.php?controller=login">Compte <?php echo $user['lastname']; ?></a></li>
                 <li><a href="index.php?controller=cart">Mon panier : (0)</a></li>
             </ul>	
         </aside>

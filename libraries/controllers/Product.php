@@ -11,7 +11,8 @@ class Product extends Controller {
     public function find(){
         $product = $this->model->findOne($_GET['id']);
         $pageTitle = "Produit ". $product['prod_name'];
-        \Renderer::render('product', compact('pageTitle', 'product'));
+        $user = $this->status();
+        \Renderer::render('product', compact('pageTitle','user', 'product'));
     }
 
 
