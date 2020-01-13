@@ -13,11 +13,11 @@ abstract class Model
         $this->pdo = \Database::getPdo();
     }
 
-     /**
-     * retourne la liste des articles classés par date de création.
-     * 
-     * @return array
-     */
+    /**
+    * retourne la liste compléte des produits classés par date de création.
+    * 
+    * @return array
+    */
     public function findAll(?string $order = "") : array 
     {
         $sql="SELECT * FROM {$this->table}";
@@ -31,6 +31,12 @@ abstract class Model
         return $item;
     }
 
+
+    /**
+    * retourne la liste d'une catégorie de produits.
+    * 
+    * @return array
+    */
     public function findAllByCategory(int $category)
     {
         $query = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE prod_category = :prod_category");

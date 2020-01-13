@@ -7,7 +7,7 @@ class Login extends Controller {
 
     protected $modelName = "\Models\Login";
     public function index(){
-        $pageTitle = "Accueil";
+        $pageTitle = "Page de connexion";
         \Renderer::render('login', compact('pageTitle'));
     }
 
