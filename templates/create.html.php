@@ -12,10 +12,13 @@
         <p>Confirmer votre mot de passe :</p>
             <input type="password" name="controlpassword"/>
         <p>Votre adresse de livraison :</p>
-            <textarea name="delivery_adress" rows="4" cols="23"> </textarea>
+            <textarea name="address" rows="4" cols="23"> </textarea>
         <p>Téléphone :</p>
             <input type="text" name="phone" />
         <p>valider votre création de compte :</p>
             <input type="submit" value="S'enregistrer"/>
     </form>
+    <?php foreach($errors as $error) : ?>
+         <span><?= $error ?> </span>
+    <?php endforeach ?>
 </article>
