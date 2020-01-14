@@ -24,6 +24,8 @@ class Create extends Controller {
         $email = $_POST['email'];
         $address = $_POST['address'];
         $phone = $_POST['phone'];
+        $accountName = $this->accountName;
+        $disconnect = $this->disconnect;
         
         if($_POST['password'] != $_POST['controlpassword']){
             $errors[] = 'Erreur! les champs mot de passe ne sont pas identiques !';
@@ -54,10 +56,11 @@ class Create extends Controller {
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $this->model->adduser(compact('lastname','firstname', 'password', 'email', 'address', 'phone'));
             $pageTitle = "Création d'un nouveau compte.";
-            \Renderer::render('index', compact('pageTitle'));
+
+            \Renderer::render('index', compact('pageTitle', 'errors', 'accountName', 'disconnect'));
         }else{
             $pageTitle = "Erreur dans la création du compte.";
-            \Renderer::render('create', compact('pageTitle', 'errors'));
+            \Renderer::render('create', compact('pageTitle', 'errors', 'accountName', 'disconnect'));
         }
     }
 

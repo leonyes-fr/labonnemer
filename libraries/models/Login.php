@@ -17,7 +17,7 @@ class Login extends Model {
             if ($isPasswordCorrect) 
             {
                 $_SESSION['connected']= true;
-                $_SESSION['user']= ['id'=>$user['cust_id'],'lastname'=>$user['cust_lastname'],'firstname'=>$user['cust_firstname'],'email'=>$user['cust_email'], 'address'=>$user['cust_address']];
+                $_SESSION['user']= ['id'=>$user['cust_id'],'lastname'=>$user['cust_lastname'],'firstname'=>$user['cust_firstname'],'email'=>$user['cust_email'], 'address'=>$user['cust_address'], 'phone'=>$user['cust_phone']];
                 $status = "ok";
             }else{
                 $status = "false";

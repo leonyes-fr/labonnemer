@@ -5,9 +5,11 @@
 	attention au bulletest.png provisoir.
 	font open sans
 	mouette qui passe de gauche a droite.
-	faire icones poisson bouteille  conserves et hamecon maori
 	vérifier attaque injection js dans texte form
-
+	Modifier adresse mail et livraison.
+	nom prenom
+	Vos informations de compte:
+	Vos précédentes commandees:
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -186,7 +188,7 @@ article h1:first-child {
 }
 
 /* Rajoute une sous ligne sour les titres.*/
-.home h2:after, .home h1:after , .product h1 , .login h1 , .create h1{
+.home h2:after, .home h1:after , .product h1 , .login h1 , .create h1, .account h1 {
 	content: "";
 	display: block;
 	border-bottom : 1px solid #fec72f;
@@ -327,24 +329,24 @@ h2:nth-child(even) {
 	color:  #fec72f;
 }
 
-/* -------------------- page login /create ------------ */
+/* -------------------- page login /create / account ------------ */
 
 .login , .create {
 	font-size: 2rem;
 }
 
-.login , .login h2 , .create{
+.login , .login h2 , .create, .account{
 	margin: 0 auto;
 	text-align: center;
 }
 
-.login h1 , .create h1{
+.login h1 , .create h1, .account h1{
 	font-size: 3.2rem;
 	color: #fec72f;
 	text-align: left;
 }
 
-.login input[type=submit] , .create input[type=submit] {
+.login input[type=submit] , .create input[type=submit] , .account input[type=submit]{
 	background-color: #fec72f;
 	color: white;
 	text-transform: uppercase;
@@ -360,7 +362,7 @@ line-height: 4;
 }
 
 /*Affiche les messages d'erreur en rouge.(login, inscription) */
-.create span, .login span {
+.create span, .login span, .account span {
 	display: block;
 	color:red;
 }

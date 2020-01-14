@@ -17,8 +17,8 @@ class Login extends Controller {
     }
 
     public function getlogin(){
-        // si post alors logé la session. exemple:
-
+        $accountName = $this->accountName;
+        $disconnect = $this->disconnect;
         if(!empty($_POST['email']) && !empty($_POST['password']))
         {
             $email = $_POST['email'];
@@ -35,7 +35,7 @@ class Login extends Controller {
         }else{
             $error = "Erreur! Champs manquants !";
             $pageTitle = "Page de connexion";
-            \Renderer::render('login', compact('pageTitle', 'error'));
+            \Renderer::render('login', compact('pageTitle', 'error','disconnect', 'accountName'));
         }
         
     }
