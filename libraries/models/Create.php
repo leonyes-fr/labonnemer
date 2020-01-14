@@ -13,5 +13,4 @@ class Create extends Model {
         $insert->execute(array('lastname'=>$lastname, 'firstname'=>$firstname,'email'=>$email, 'password'=>$password, 'address'=>$address, 'phone'=>$phone)); 
     }
    
-
 }

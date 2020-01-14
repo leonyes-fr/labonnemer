@@ -18,7 +18,7 @@
             <ul>
                 <li><?= $accountName?></li><!-- Affiche le prénom, si loggé. !-->
                 <li><?= $disconnect; ?></li><!-- Propose la déconnexion, si loggé  !-->
-                <li><a href="index.php?controller=cart">Mon panier : (0)</a></li>
+                <li><a href="index.php?controller=cart">Mon panier : (<span id="cartcontent">0</span>)</a></li>
             </ul>	
         </aside>
         <figure class="logo">
@@ -64,8 +64,8 @@
                 </ul>
             </article>
     </footer>
-
 <script src="../labonnemer/public/js/main.js"></script>
+
 </body>
 
 </html>

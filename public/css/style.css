@@ -188,7 +188,7 @@ article h1:first-child {
 }
 
 /* Rajoute une sous ligne sour les titres.*/
-.home h2:after, .home h1:after , .product h1 , .login h1 , .create h1, .account h1 {
+.home h2:after, .home h1:after , .product h1 , .login h1 , .create h1, .account h1, .cart h1 {
 	content: "";
 	display: block;
 	border-bottom : 1px solid #fec72f;
@@ -329,18 +329,18 @@ h2:nth-child(even) {
 	color:  #fec72f;
 }
 
-/* -------------------- page login /create / account ------------ */
+/* -------------------- page login /create / account /cart ------------ */
 
 .login , .create {
 	font-size: 2rem;
 }
 
-.login , .login h2 , .create, .account{
+.login , .login h2 , .create, .account, .cart{
 	margin: 0 auto;
 	text-align: center;
 }
 
-.login h1 , .create h1, .account h1{
+.login h1 , .create h1, .account h1, .cart h1{
 	font-size: 3.2rem;
 	color: #fec72f;
 	text-align: left;

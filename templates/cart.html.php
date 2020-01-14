@@ -1,4 +1,4 @@
 <article class="cart">
-<h1> Bienvenue dans la partie panier. </h1>
+<h1>Votre panier. </h1>
 
 </article>
