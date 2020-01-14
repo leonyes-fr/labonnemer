@@ -325,6 +325,7 @@ h2:nth-child(even) {
 
 .product em {
 	display: block;
+	margin-bottom: 5%;
 	font-size: 3.5rem;
 	color:  #fec72f;
 }

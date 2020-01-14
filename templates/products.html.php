@@ -9,6 +9,5 @@
     <em>Prix : <?=  $product['prod_price'] ?> Euros </em>
     <a href="index.php?controller=product&task=find&category=1&id=<?=  $product['prod_id'] ?>">decouvrir</a>
 </article>
-
 <?php endforeach ?>
 

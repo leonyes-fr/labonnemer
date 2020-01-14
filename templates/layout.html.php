@@ -22,9 +22,9 @@
             </ul>	
         </aside>
         <figure class="logo">
-            <a href="index.php"><img src="public/img/visuals/logo250.png" alt="logo la bonne mer"></a>
+            <a href="index.php"><img src="public/img/visuals/logo.png" alt="logo la bonne mer"></a>
         </figure>
-        <img src="public/img/visuals/bulletest.png" class="visible" alt="bulle au survol du logo.">
+        <img src="public/img/visuals/bulle.png" class="visible" alt="bulle au survol du logo.">
         <nav>
             <ul>
                 <li><a href="index.php?controller=products&task=list&category=1">Crustaces</a></li>
@@ -64,6 +64,7 @@
                 </ul>
             </article>
     </footer>
+<script src="../labonnemer/public/js/cart.js"></script>
 <script src="../labonnemer/public/js/main.js"></script>
 
 </body>

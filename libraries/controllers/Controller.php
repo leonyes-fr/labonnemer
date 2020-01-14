@@ -10,7 +10,7 @@ abstract class Controller {
     protected $accountName;
     protected $disconnect;
     
-    //A l'appel de la classe mére abstraite Controller, se lance automatiquement la fonction construct qui va instancier la classe modele correspondante au controller invoquer. 
+    //A l'appel de la classe mére abstraite Controller, se lance automatiquement la fonction construct qui va instancier la classe modele correspondante au controller invoqué. 
     public function __construct(){
         $this->model = new $this->modelName();
         $this->status();

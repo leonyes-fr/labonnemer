@@ -15,6 +15,8 @@ function infoBulle(){
 
 //Commence quand le dom est chargé.
 document.addEventListener('DOMContentLoaded', function(){
+    //new cart sert à connaitre le nombre d'objets rajouté dans le panier sur le header.
+    let cart = new Cart();
     
     //--------- sélécteurs qui fait apparaitre / disparaitre la bulle sur le logo. -------------------
     document.querySelector('figure').addEventListener('mouseover',infoBulle);

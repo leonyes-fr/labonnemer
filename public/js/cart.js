@@ -6,7 +6,7 @@ class Cart
         
         this.totalCart = 0;
         this.products= this.load();  // Charge le contenu du localstorage, nécessaire a la persistence.
-        
+        document.querySelector('#cartcontent').innerHTML = this.products.length;
     }
 
     add(e)
@@ -23,7 +23,7 @@ class Cart
     save()
     {
         window.localStorage.setItem('products', JSON.stringify(this.products));
-        console.log(this.products);  // lance la persistence dans le localstorage, apres avoir placé en string.
+        console.log(this.products);  // lance la persistence dans le localstorage, apres l'avoir transformé en string.
     }
 
     load()
@@ -34,17 +34,10 @@ class Cart
             return new Array();
         }
         return JSON.parse(retrieveProducts);
-
     }
 
-    update(){ }// j'ai mis 1 au lieu de  this.products.length;
-       // document.querySelector('#cartcontent').innerHTML = "Mon panier :" + this.products.length;
-
-        //Calcul le montant total du panier, l'affiche dans le haut du layout.
-      //  let totalCart = 0;
-           // for (let [key, value] of Object.entries(this.products)) {
-          //  totalCart= parseInt(totalCart) + (parseInt(value.price)*parseInt(value.quantity));
-        //    }
-     //   document.querySelector('#cartprice').innerHTML = totalCart + " Euros.";
-    //}
+    update(){ 
+        document.querySelector('#cartcontent').innerHTML = this.products.length;
+    }
+    
 }
