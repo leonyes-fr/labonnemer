@@ -9,11 +9,13 @@ abstract class Controller {
     protected $sessionStatus;
     protected $accountName;
     protected $disconnect;
+    protected $initCart;
     
     //A l'appel de la classe mére abstraite Controller, se lance automatiquement la fonction construct qui va instancier la classe modele correspondante au controller invoqué. 
     public function __construct(){
         $this->model = new $this->modelName();
         $this->status();
+        $this->cartlogged();
     }
 
     public function status(){
@@ -24,6 +26,15 @@ abstract class Controller {
         }else{
             $this->accountName = '<a href="index.php?controller=login">Compte</a>';
             $this->disconnect ='';
+        }
+    }
+
+    public function cartlogged(){
+       
+        if(isset($_SESSION['connected']) && $_SESSION['connected']== true){
+            $this->initCart = '<input type="submit" value="simuler le paiement">';
+        }else{
+            $this->initCart = '<a href="index.php?controller=login">Créer votre compte pour continuer </a>';
         }
     }
 

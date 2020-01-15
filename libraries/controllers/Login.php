@@ -29,7 +29,9 @@ class Login extends Controller {
             }else{
                 $error = "Erreur! Login ou mot de passe non valide.";
                 $pageTitle = "Page de connexion";
-                \Renderer::render('login', compact('pageTitle', 'error'));
+                $accountName = $this->accountName;
+                $disconnect = $this->disconnect;
+                \Renderer::render('login', compact('pageTitle', 'error', 'disconnect', 'accountName'));
             }
             
         }else{

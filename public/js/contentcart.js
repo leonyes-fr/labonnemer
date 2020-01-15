@@ -13,34 +13,35 @@ function loadList()
 {
     let retrieveProducts = localStorage.getItem('products');
     let resultProducts = JSON.parse(retrieveProducts);
-    console.log(resultProducts);
     return resultProducts;
 };
 
-// Vide la contact liste, recharge la liste de contact puis l'affiche dans le html.
+
 function displayProducts()
 {
-    listProducts = loadList();
+    listProducts = loadList(); // Récupére la liste des produits sous forme de collection d'objet js.
     document.querySelector('.contentcart').innerHTML = '';
     listProducts.forEach((element,index) => {
-        document.querySelector('.contentcart').innerHTML += ' <td>Nom :'+ element.name + ' id :'+ element.product +'Quantité: '+ element.quantity +'Prix: '+ element.price + ' </td><br>';
+
+        document.querySelector('.contentcart').innerHTML +=
+                '<article class="products cartlist">'+
+                '<h2>Nom :'+ element.name + '</h2>'+
+                '<p>Quantité: ' + element.quantity +'</p>'+
+                '<p>Prix: '+ element.price + '</p>'+
+                '</article>';
+
+        //document.querySelector('.contentcart').innerHTML += ' <td>Nom :'+ element.name + ' id :'+ element.product +'Quantité: '+ element.quantity +'Prix: '+ element.price + ' </td><br>';
+    
     });
 };
-
-
 
 /* --------------------------------------------------------------------------------------------------
     -----------------------------------------------CODE PRINCIPAL ------------------------------------
 -----------------------------------------------------------------------------------------------------*/
 
 document.addEventListener('DOMContentLoaded', function(){
-
+    let cart = new Cart();
     
     displayProducts();
 
-
-
 });
-
-
-console.log("content cart marche");

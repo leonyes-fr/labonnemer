@@ -261,7 +261,7 @@ h2:nth-child(even) {
 	font-size: 1.8rem;
 }
 
-.products a , .product a , .login a {
+.products a , .product a , .login a, .cart a {
 	background-color: #fec72f;
 	text-transform: uppercase;
 	width: 15%;
@@ -347,7 +347,7 @@ h2:nth-child(even) {
 	text-align: left;
 }
 
-.login input[type=submit] , .create input[type=submit] , .account input[type=submit]{
+.login input[type=submit] , .create input[type=submit] , .account input[type=submit], .cart input[type=submit]{
 	background-color: #fec72f;
 	color: white;
 	text-transform: uppercase;
@@ -368,8 +368,12 @@ line-height: 4;
 	color:red;
 }
 
+.cart a {
+	margin : 0 auto;
+	display: block;
+	margin-bottom: 4%;
 
-/* -------------------- page cart ------------ */
+}
 
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FOOTER LISTE -------------------------------------

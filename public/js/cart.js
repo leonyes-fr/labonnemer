@@ -4,8 +4,8 @@ class Cart
     constructor()
     {
         
-        this.totalCart = 0;
         this.products= this.load();  // Charge le contenu du localstorage, nécessaire a la persistence.
+        this.validate()
         document.querySelector('#cartcontent').innerHTML = this.products.length;
     }
 
@@ -23,7 +23,7 @@ class Cart
     save()
     {
         window.localStorage.setItem('products', JSON.stringify(this.products));
-        console.log(this.products);  // lance la persistence dans le localstorage, apres l'avoir transformé en string.
+       // lance la persistence dans le localstorage, apres l'avoir transformé en string.
     }
 
     load()
@@ -36,8 +36,29 @@ class Cart
         return JSON.parse(retrieveProducts);
     }
 
+    loadJson()
+    {
+        let retrieveProducts = localStorage.getItem('products');
+        //retrieveProducts contient la liste des produits du panier sous format Json.
+        if(retrieveProducts == null){
+            return new Array();
+        }
+        return retrieveProducts;
+    }
+
     update(){ 
         document.querySelector('#cartcontent').innerHTML = this.products.length;
     }
     
+    validate(){
+        if(document.getElementById('listproduct'))
+        {
+            let productsJson = this.loadJson();
+            document.querySelector('#listproduct').value = productsJson;
+        }
+        
+
+    }
+
+
 }
