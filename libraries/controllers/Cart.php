@@ -11,13 +11,13 @@ class Cart extends Controller {
         $pageTitle = "Panier";
         $accountName = $this->accountName;
         $disconnect = $this->disconnect;
-        $initCart = $this->initCart;
+        $initCart = $this->initCart; //statut connecté ou non du client.
         \Renderer::render('cart', compact('pageTitle', 'accountName', 'disconnect', 'initCart'));
     }
 
+    // Fonction qui va dans un premier temps controllé que les prix du localstorage correspondent a la bdd, puis persister les données dans la table cart.
     public function addproduct(){
         $cartList = json_decode($_POST['listproducts']);
-        var_dump($cartList);
         foreach($cartList as $singleProduct){
             // checkprice vérifie que le prix venant du localstorage n'as pas était modifié sur l'ordi client.
             if ($this->model->checkprice( $singleProduct->product ,$singleProduct->price)){
@@ -29,7 +29,6 @@ class Cart extends Controller {
                 $this->model->addcart(compact('user','product', 'quantity', 'price'));
             }
         }
-
         $pageTitle = "Votre compte";
         $accountName = $this->accountName;
         $disconnect = $this->disconnect;

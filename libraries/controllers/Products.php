@@ -3,11 +3,12 @@
 namespace Controllers;
 require_once('libraries/autoload.php');
 
+//La page d'affichage d'une catégorie des produits en vente sur la boutique.
 class Products extends Controller {
 
     protected $modelName = "\Models\Products";
 
-    //Lance une page produits avec tt les produits de la catégorie choisis.
+    //Lance une page produits avec tout les produits de la catégorie choisis.
     public function list(){
         $products = $this->model->findAllByCategory($_GET['category']);
         $accountName = $this->accountName;

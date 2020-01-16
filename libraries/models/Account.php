@@ -7,6 +7,7 @@ class Account extends Model {
 
     protected $table = "customer";
 
+    // Fonction permettant au client de mettre lui même à jour ses coordonnées.
     public function updateuser(array $variables = []){
         extract($variables);
         $update = $this->pdo->prepare('UPDATE customer SET cust_lastname = :lastname, cust_firstname = :firstname, cust_email = :email, cust_address = :address, cust_phone = :phone WHERE cust_id = :id');

@@ -9,6 +9,9 @@
 	Vos informations de compte:
 	Vos précédentes commandees:
 	pouvoir supp son compte utilisateur le cloturer
+	virer la duplicité de email possible en bdd......
+	panier: modif le prix unitaire ou rajouté le prix total...
+	apres valider paiement, montrer que la commande a marché genre une redirection de qq sec voir un setinterval!
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -350,6 +353,7 @@ h2:nth-child(even) {
 	text-align: center;
 }
 
+/* Améliore l'apparence des boutons "submit" */
 .login input[type=submit] , .create input[type=submit] , .account input[type=submit], .cart input[type=submit]{
 	background-color: #fec72f;
 	color: white;

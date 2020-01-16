@@ -7,7 +7,7 @@ class Product extends Model {
 
     protected $table = "product";
 
-    //Retourne un produit en particulier et affiche ses caractéristiques dans la page produit.
+    //Retourne un produit en particulier et affiche ses caractéristiques dans la page produit dédiée.
     public function findOne(int $product) {
         $query = $this->pdo->prepare("SELECT * FROM product WHERE prod_id = :prod_id");
         $query->execute(['prod_id' => $product]);

@@ -7,7 +7,7 @@ require_once('libraries/autoload.php');
 class Login extends Controller {
 
     protected $modelName = "\Models\Login";
-
+    // Comme toujours, la méthode "index" ouvre la page "par défaut de login"
     public function index(){
         $pageTitle = "Page de connexion";
         $accountName = $this->accountName;
@@ -16,6 +16,7 @@ class Login extends Controller {
         \Renderer::render('login', compact('pageTitle', 'error', 'disconnect', 'accountName'));
     }
 
+    //La fonction getlogin controle que l'adresse mail et le mot de passe fourni existe en bdd.
     public function getlogin(){
         $accountName = $this->accountName;
         $disconnect = $this->disconnect;
@@ -23,6 +24,7 @@ class Login extends Controller {
         {
             $email = $_POST['email'];
             $password = $_POST['password'];
+            //On interroge le modéle, si retourne "ok" le client est loggé.
             $statusLogin = $this->model->getlogin(compact('email', 'password'));
             if($statusLogin == "ok"){
                 \Http::redirect("index.php");
@@ -39,7 +41,7 @@ class Login extends Controller {
             $pageTitle = "Page de connexion";
             \Renderer::render('login', compact('pageTitle', 'error','disconnect', 'accountName'));
         }
-        
     }
+
 
 }

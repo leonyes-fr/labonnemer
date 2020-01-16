@@ -7,6 +7,7 @@ class Login extends Model {
 
     protected $table = "customer";
 
+    // Après les controles d'usages, on vérifie le hash du password et sa correspondance avec l'email qui sert d'identifiant login.
     public function getlogin(array $variables = []){
         $status;
         extract($variables);

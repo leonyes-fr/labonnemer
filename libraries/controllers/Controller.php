@@ -29,7 +29,7 @@ abstract class Controller {
         }
     }
 
-    //Si utilisateur connecté, peux procéder au paiement, sinon propose lien création d'un compte.
+    //Si utilisateur connecté, on peux procéder au paiement, sinon propose lien création d'un compte.
     public function cartlogged(){
         if(isset($_SESSION['connected']) && $_SESSION['connected']== true){
             $this->initCart = '<input type="submit" id="validatecart" value="simuler le paiement">';

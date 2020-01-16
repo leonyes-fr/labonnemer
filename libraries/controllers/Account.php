@@ -8,7 +8,6 @@ class Account extends Controller {
     protected $modelName = "\Models\Account";
 
     public function index(){
-        //Penser a faire un controle de sessions = true pour éviter gruge.
         if($_SESSION['connected'] == true){
             $pageTitle = "Votre compte";
             $accountName = $this->accountName;
@@ -20,6 +19,7 @@ class Account extends Controller {
         
     }
 
+    //Permet à un client, après quelque controles d'usage, de mettre à jour ses coordonnées.
     public function updateuser(){
         $errors= [];
         $lastname = $_POST['lastname'];

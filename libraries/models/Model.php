@@ -14,7 +14,7 @@ abstract class Model
     }
 
     /**
-    * retourne la liste compléte des produits classés par date de création.
+    * retourne la liste compléte des produits classés par date de création. Non usité pour l'instant. Vu sur divers tutos... avec des fonctions de tris possible, intéressant++
     * 
     * @return array
     */
@@ -32,17 +32,6 @@ abstract class Model
     }
 
 
-    /**
-    * retourne la liste d'une catégorie de produits.
-    * 
-    * @return array
-    */
-    public function findAllByCategory(int $category)
-    {
-        $query = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE prod_category = :prod_category");
-        $query->execute(['prod_category' => $category]);
-        $item = $query->fetchAll();
-        return $item;
-    }
+
 
 }

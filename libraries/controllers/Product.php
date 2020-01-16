@@ -3,6 +3,7 @@
 namespace Controllers;
 require_once('libraries/autoload.php');
 
+// La page de description d'un produit en particulier de la boutique.
 class Product extends Controller {
 
     protected $modelName = "\Models\Product";

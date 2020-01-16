@@ -26,7 +26,7 @@ class Create extends Controller {
         $phone = $_POST['phone'];
         $accountName = $this->accountName;
         $disconnect = $this->disconnect;
-        
+        //série de controles de données avant leur persistance dans la table customer.
         if($_POST['password'] != $_POST['controlpassword']){
             $errors[] = 'Erreur! les champs mot de passe ne sont pas identiques !';
         }
@@ -50,7 +50,7 @@ class Create extends Controller {
         if($_POST['phone'] == NULL){
             $errors[] = 'Erreur! Le champ Telephone est vide !';
         }
-
+        //Si pas d'erreurs, on aoute le nouveau client.
         if(count($errors) == 0)
         {
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
