@@ -12,7 +12,6 @@ let initialPrice = document.querySelector('#price').innerHTML; // Prix initial d
  // Fonction qui met à jour le prix selon quantité de produits ajouté, puis l'affecte au bouton sur un dataset.
 function updateOrder(){
     document.querySelector('#price').innerHTML = initialPrice*document.querySelector('#quantity').value;  // met à jour le prix selon quantité de produits ajoutés.
-    document.querySelector('#addcart').dataset.price = document.querySelector('#price').innerHTML; // met a jour le prix à payé sur le dataset du bouton ajouté.
     document.querySelector('#addcart').dataset.quantity = document.querySelector('#quantity').value; // met a jour la quantité de produits à acheter.
 }
 

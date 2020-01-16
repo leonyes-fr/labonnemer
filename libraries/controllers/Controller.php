@@ -18,8 +18,8 @@ abstract class Controller {
         $this->cartlogged();
     }
 
+    // Si utilisateur connecté, affiche son nom et deux liens: Manager son compte, ou se déconnecter. Sinon lien pour crée un compte.
     public function status(){
-       
         if(isset($_SESSION['connected']) && $_SESSION['connected']== true){
             $this->accountName = '<a href="index.php?controller=account">Votre compte: '. $_SESSION['user']['firstname'] . '</a>';
             $this->disconnect = '<a href="index.php?controller=account&task=disconnect">Se deconnecter</a>';
@@ -29,10 +29,10 @@ abstract class Controller {
         }
     }
 
+    //Si utilisateur connecté, peux procéder au paiement, sinon propose lien création d'un compte.
     public function cartlogged(){
-       
         if(isset($_SESSION['connected']) && $_SESSION['connected']== true){
-            $this->initCart = '<input type="submit" value="simuler le paiement">';
+            $this->initCart = '<input type="submit" id="validatecart" value="simuler le paiement">';
         }else{
             $this->initCart = '<a href="index.php?controller=login">Créer votre compte pour continuer </a>';
         }

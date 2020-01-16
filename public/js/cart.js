@@ -56,8 +56,11 @@ class Cart
             let productsJson = this.loadJson();
             document.querySelector('#listproduct').value = productsJson;
         }
-        
-
+    }
+    clear(e){
+        this.products= []; // Clear la liste de produits du localstorage, le php prend le relais pour aller en bdd.
+        this.save();
+        this.update();
     }
 
 

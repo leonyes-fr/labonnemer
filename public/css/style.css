@@ -6,10 +6,9 @@
 	font open sans
 	mouette qui passe de gauche a droite.
 	vérifier attaque injection js dans texte form
-	Modifier adresse mail et livraison.
-	nom prenom
 	Vos informations de compte:
 	Vos précédentes commandees:
+	pouvoir supp son compte utilisateur le cloturer
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -341,10 +340,14 @@ h2:nth-child(even) {
 	text-align: center;
 }
 
-.login h1 , .create h1, .account h1, .cart h1{
+.login h1 , .create h1, .account h1, .cart h1 {
 	font-size: 3.2rem;
 	color: #fec72f;
 	text-align: left;
+}
+
+.account h2{
+	text-align: center;
 }
 
 .login input[type=submit] , .create input[type=submit] , .account input[type=submit], .cart input[type=submit]{

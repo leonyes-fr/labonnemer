@@ -16,15 +16,25 @@ class Cart extends Controller {
     }
 
     public function addproduct(){
-        
-        var_dump($_POST['listproducts']);
-        $result = json_decode($_POST['listproducts']);
-        var_dump($result);
-        die();
-        $pageTitle = "Panier";
+        $cartList = json_decode($_POST['listproducts']);
+        var_dump($cartList);
+        foreach($cartList as $singleProduct){
+            // checkprice vérifie que le prix venant du localstorage n'as pas était modifié sur l'ordi client.
+            if ($this->model->checkprice( $singleProduct->product ,$singleProduct->price)){
+                //Si le prix n'as pas était "piraté", on peux save le produit dans le panier bdd.
+                $user = $_SESSION['user']['id'];
+                $product = $singleProduct->product;
+                $quantity = $singleProduct->quantity;
+                $price = $singleProduct->price;
+                $this->model->addcart(compact('user','product', 'quantity', 'price'));
+            }
+        }
+
+        $pageTitle = "Votre compte";
         $accountName = $this->accountName;
         $disconnect = $this->disconnect;
-        \Renderer::render('cart', compact('pageTitle', 'accountName', 'disconnect'));
+        //rajouter les commandes en cours.
+        \Renderer::render('account', compact('pageTitle', 'accountName', 'disconnect'));
     }
 
 }
