@@ -50,14 +50,17 @@ class Create extends Controller {
         if($_POST['phone'] == NULL){
             $errors[] = 'Erreur! Le champ Telephone est vide !';
         }
+        //On controle que l'adresse mail qui servira de login n'existe pas déja en bdd. Si renvoie true on peux continuer.
+        if($this->model->controlUsername( $email)){
+            $errors[] = 'Erreur! Cette adresse email est indisponible !';
+        } 
         //Si pas d'erreurs, on aoute le nouveau client.
         if(count($errors) == 0)
         {
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $this->model->adduser(compact('lastname','firstname', 'password', 'email', 'address', 'phone'));
-            $pageTitle = "Création d'un nouveau compte.";
-
-            \Renderer::render('index', compact('pageTitle', 'errors', 'accountName', 'disconnect'));
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $this->model->adduser(compact('lastname','firstname', 'password', 'email', 'address', 'phone'));
+        $pageTitle = "Création d'un nouveau compte.";
+        \Renderer::render('index', compact('pageTitle', 'errors', 'accountName', 'disconnect'));
         }else{
             $pageTitle = "Erreur dans la création du compte.";
             \Renderer::render('create', compact('pageTitle', 'errors', 'accountName', 'disconnect'));

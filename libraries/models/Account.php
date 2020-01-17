@@ -7,6 +7,13 @@ class Account extends Model {
 
     protected $table = "customer";
 
+    public function  findallOrders($customerId){
+        $query = $this->pdo->prepare("SELECT * FROM cart WHERE car_cust_id = :car_cust_id");
+        $query->execute(['car_cust_id' => $customerId]);
+        $orders = $query->fetchAll();
+        return $orders;
+    }
+
     // Fonction permettant au client de mettre lui même à jour ses coordonnées.
     public function updateuser(array $variables = []){
         extract($variables);

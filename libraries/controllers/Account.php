@@ -12,11 +12,12 @@ class Account extends Controller {
             $pageTitle = "Votre compte";
             $accountName = $this->accountName;
             $disconnect = $this->disconnect;
-            \Renderer::render('account', compact('pageTitle', 'disconnect', 'accountName'));
+            //Récupére dans $orders la liste des produits acheté.
+            $orders= $this->model->findallOrders($_SESSION['user']['id']);
+            \Renderer::render('account', compact('pageTitle', 'disconnect', 'accountName', 'orders'));
         }else{
             \Http::redirect("index.php"); 
         }
-        
     }
 
     //Permet à un client, après quelque controles d'usage, de mettre à jour ses coordonnées.

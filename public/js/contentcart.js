@@ -25,9 +25,10 @@ function displayProducts(){
 
         document.querySelector('.contentcart').innerHTML +=
                 '<article class="products cartlist">'+
-                '<h2>Nom :'+ element.name + '</h2>'+
-                '<p>Quantité: ' + element.quantity +'</p>'+
-                '<p>Prix: '+ element.price + '</p>'+
+                '<h2>Produit : '+ element.name + '</h2>'+
+                '<p>Quantité : ' + element.quantity +
+                ' Prix unitaire : '+ element.price + 'Euros.<strong> Prix total du lot : ' + (element.price * element.quantity) + ' Euros.<strong></p>'+
+
                 '</article>';
     });
 };

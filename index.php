@@ -1,7 +1,7 @@
 <?php
 
 /*
- *Bonjour ! Attachez vos ceintures, les gilets de sauvetage sont sur votre gauche, c'est parti !
+ *Voici la page de démarrage du site. elle va charger les élements nécessaires, puis lancer par défaut le controller Home avec la méthode index.
  */
 
 // Le require_once va déclencher la fonction d'autoload pour charger les classes requises automatiquement.

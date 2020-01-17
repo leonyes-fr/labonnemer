@@ -16,7 +16,7 @@
     <header>
         <aside>
             <ul>
-                <li><?= $accountName?></li><!-- Affiche le prénom, si loggé. !-->
+                <li><?= $accountName; ?></li><!-- Affiche le prénom, si loggé. !-->
                 <li><?= $disconnect; ?></li><!-- Propose la déconnexion, si loggé  !-->
                 <li><a href="index.php?controller=cart">Mon panier : (<span id="cartcontent">0</span>)</a></li>
             </ul>	

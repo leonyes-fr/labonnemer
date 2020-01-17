@@ -2,15 +2,11 @@
 	todo:
 	bleu foncé 016fa0 
 	bleu clair 60b3d5
-	attention au bulletest.png provisoir.
 	font open sans
 	mouette qui passe de gauche a droite.
 	vérifier attaque injection js dans texte form
-	Vos informations de compte:
-	Vos précédentes commandees:
 	pouvoir supp son compte utilisateur le cloturer
-	virer la duplicité de email possible en bdd......
-	panier: modif le prix unitaire ou rajouté le prix total...
+	pouvoir supp un article du panier
 	apres valider paiement, montrer que la commande a marché genre une redirection de qq sec voir un setinterval!
 */
 
@@ -375,13 +371,26 @@ line-height: 4;
 	color:red;
 }
 
+.cart .products h2{
+	width: 40%;
+}
+
 .cart a {
 	margin : 0 auto;
 	display: block;
 	margin-bottom: 4%;
-
 }
 
+.cart p {
+	margin: 0 auto;
+	text-align: center;
+	margin: 2%;
+	width: auto;
+}
+
+.cart h2:nth-child(odd) {
+    text-align: center; 
+}
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FOOTER LISTE -------------------------------------
 -----------------------------------------------------------------------------------------------------*/

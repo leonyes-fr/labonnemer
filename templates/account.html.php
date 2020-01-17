@@ -2,9 +2,13 @@
 <h1> Bienvenue sur votre compte. </h1>
     <h2>Vos commandes :</h2>
     <article class="customerorder">
-        <p>Vous n'avez pas de commandes en cours.</p>
+            <?php foreach( $orders as $order) : ?>
+        <article class="products">
+            <h2><?= $order['car_id'] ?></h2>
+        </article>
+        <?php endforeach ?>
     </article>
-    <!--  Faire ici un foreach des commandes de l'utilisateur !-->
+   
 
     <h2>Vos informations :</h2>
         <form action="index.php?controller=account&task=updateuser" method="post">
