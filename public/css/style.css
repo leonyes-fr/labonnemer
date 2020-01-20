@@ -1,13 +1,10 @@
 /* 
 	todo:
-	bleu foncé 016fa0 
-	bleu clair 60b3d5
-	font open sans
 	mouette qui passe de gauche a droite.
 	vérifier attaque injection js dans texte form
 	pouvoir supp son compte utilisateur le cloturer
 	pouvoir supp un article du panier
-	apres valider paiement, montrer que la commande a marché genre une redirection de qq sec voir un setinterval!
+	calculer le sum precis en tenant compte de la quantité de produits. modifer le sql
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -225,7 +222,7 @@ h2:nth-child(even) {
 
 /* -------------------- page products ------------ */
 
-.products {
+.products, .accountorder {
 	background-color: #60b3d5;
 	margin: 0 auto;
 	text-align: center;
@@ -328,7 +325,7 @@ h2:nth-child(even) {
 	color:  #fec72f;
 }
 
-/* -------------------- page login /create / account /cart ------------ */
+/* -------------------- page login /create  ------------ */
 
 .login , .create {
 	font-size: 2rem;
@@ -343,10 +340,6 @@ h2:nth-child(even) {
 	font-size: 3.2rem;
 	color: #fec72f;
 	text-align: left;
-}
-
-.account h2{
-	text-align: center;
 }
 
 /* Améliore l'apparence des boutons "submit" */
@@ -371,6 +364,31 @@ line-height: 4;
 	color:red;
 }
 
+/* -------------------- account  --------------- */
+.account h2{
+	text-align: center;
+}
+
+.account em{
+	color: red;
+	display: block;
+}
+
+.account a {
+		display: block;
+		margin: 0 auto;
+		background-color: red;
+		text-transform: uppercase;
+		width: 15%;
+		padding: 1%;
+		font-size: 2.5rem;
+		border-radius: 4%;
+		margin-bottom: 4%;
+		margin-top: 4%;
+}
+
+/* -------------------- page cart  -------------- */
+
 .cart .products h2{
 	width: 40%;
 }
@@ -391,6 +409,7 @@ line-height: 4;
 .cart h2:nth-child(odd) {
     text-align: center; 
 }
+
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- FOOTER LISTE -------------------------------------
 -----------------------------------------------------------------------------------------------------*/

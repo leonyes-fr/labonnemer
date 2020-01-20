@@ -1,12 +1,14 @@
 <article class="account">
 <h1> Bienvenue sur votre compte. </h1>
-    <h2>Vos commandes :</h2>
+    <h2>Vos commandes en cours :</h2>
     <article class="customerorder">
             <?php foreach( $orders as $order) : ?>
-        <article class="products">
-            <h2><?= $order['car_id'] ?></h2>
+        <article class="accountorder">
+            <h3><?= $order['prod_name'] ?></h3>
+            <p>Quantité choisis :<?= $order['car_prod_quantity'] ?> . Prix unitaire :<?= $order['prod_price'] ?></p>
         </article>
         <?php endforeach ?>
+            <strong> <?= $sumOrder; ?> </strong>
     </article>
    
 
@@ -25,4 +27,7 @@
             <p>Modifier les informations de votre compte:</p>
                 <input type="submit" value="Mettre à jour"/>
         </form>
+    <h2> Cloturer son compte : </h2>
+                <em>Attention, cette action est irréversible, et votre compte ne pourra être récupérer.</em>
+                <a href="ferme le compte avec une modale avant" id="deleteaccount" >Supprimer le compte</a>
 </article>

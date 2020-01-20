@@ -7,11 +7,20 @@ class Account extends Model {
 
     protected $table = "customer";
 
-    public function  findallOrders($customerId){
-        $query = $this->pdo->prepare("SELECT * FROM cart WHERE car_cust_id = :car_cust_id");
+    // Va fournir à la page accompte la liste des commandes passés en cours de traitement par la société.
+    public function  findAllOrders($customerId){
+        $query = $this->pdo->prepare("SELECT * FROM cart INNER JOIN product ON prod_id = car_prod_id WHERE car_cust_id = :car_cust_id");
         $query->execute(['car_cust_id' => $customerId]);
         $orders = $query->fetchAll();
         return $orders;
+    }
+
+    // Va fournir à la page accompte la somme des commandes passé en cours de traitement par la société.
+    public function  sumAllOrders($customerId){
+        $query = $this->pdo->prepare("SELECT SUM(car_prod_price * car_prod_quantity) FROM cart WHERE car_cust_id = :car_cust_id");
+        $query->execute(['car_cust_id' => $customerId]);
+        $totalOrder = $query->fetchAll();
+        return $totalOrder;
     }
 
     // Fonction permettant au client de mettre lui même à jour ses coordonnées.

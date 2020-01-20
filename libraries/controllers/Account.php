@@ -12,9 +12,15 @@ class Account extends Controller {
             $pageTitle = "Votre compte";
             $accountName = $this->accountName;
             $disconnect = $this->disconnect;
-            //Récupére dans $orders la liste des produits acheté.
-            $orders= $this->model->findallOrders($_SESSION['user']['id']);
-            \Renderer::render('account', compact('pageTitle', 'disconnect', 'accountName', 'orders'));
+            //Récupére dans $orders la liste des produits commandé.
+            $orders= $this->model->findAllOrders($_SESSION['user']['id']);
+            $totalOrder= $this->model->sumAllOrders($_SESSION['user']['id']);
+            if($totalOrder[0]['SUM(car_prod_price * car_prod_quantity)'] == null){
+                $sumOrder="Vous n'avez pas de commandes en cours.";
+            }else{
+                $sumOrder= 'Le prix total de la commande en cours de traitement est de ' . $totalOrder[0]['SUM(car_prod_price * car_prod_quantity)'] . ' Euros';
+            }
+            \Renderer::render('account', compact('pageTitle', 'disconnect', 'accountName', 'orders', 'sumOrder'));
         }else{
             \Http::redirect("index.php"); 
         }
