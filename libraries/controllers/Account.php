@@ -65,7 +65,14 @@ class Account extends Controller {
             \Renderer::render('index', compact('pageTitle', 'accountName', 'disconnect'));
         }else{
             $pageTitle = "Erreur dans la modification de votre compte.";
-            \Renderer::render('account', compact('pageTitle', 'errors','accountName', 'disconnect'));
+            $orders= $this->model->findAllOrders($_SESSION['user']['id']);
+            $totalOrder= $this->model->sumAllOrders($_SESSION['user']['id']);
+            if($totalOrder[0]['SUM(car_prod_price * car_prod_quantity)'] == null){
+                $sumOrder="Vous n'avez pas de commandes en cours.";
+            }else{
+                $sumOrder= 'Le prix total de la commande en cours de traitement est de ' . $totalOrder[0]['SUM(car_prod_price * car_prod_quantity)'] . ' Euros';
+            }
+            \Renderer::render('account', compact('pageTitle', 'errors','accountName', 'disconnect', 'orders', 'sumOrder'));
         }
     }
     
@@ -74,4 +81,12 @@ class Account extends Controller {
         \Http::redirect("index.php");
     }
 
+
+    public function deleteuser(){
+        if($_SESSION['connected'] == true){
+            $_SESSION['connected'] = false;
+            $this->model->deleteuser($_SESSION['user']['id']);
+        }
+        \Http::redirect("index.php"); 
+    }
 }

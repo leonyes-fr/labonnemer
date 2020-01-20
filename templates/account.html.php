@@ -21,13 +21,13 @@
             <p>Email :</p>
                 <input type="text" name="email" value="<?= $_SESSION['user']['email'] ?>"/>
             <p>Votre adresse de livraison :</p>
-                <textarea name="address" rows="4" cols="23" ><?= $_SESSION['user']['lastname'] ?> </textarea>
+                <textarea name="address" rows="4" cols="23" ><?= $_SESSION['user']['address'] ?> </textarea>
             <p>Téléphone :</p>
-                <input type="text" name="phone" value="<?= $_SESSION['user']['lastname'] ?>" />
+                <input type="text" name="phone" value="<?= $_SESSION['user']['phone'] ?>" />
             <p>Modifier les informations de votre compte:</p>
                 <input type="submit" value="Mettre à jour"/>
         </form>
     <h2> Cloturer son compte : </h2>
                 <em>Attention, cette action est irréversible, et votre compte ne pourra être récupérer.</em>
-                <a href="ferme le compte avec une modale avant" id="deleteaccount" >Supprimer le compte</a>
+                <a href="index.php?controller=account&task=deleteuser" id="deleteaccount" >Supprimer le compte</a>
 </article>
