@@ -45,7 +45,10 @@ document.addEventListener('DOMContentLoaded', function(){
     
     displayProducts();
 
-    //  Au click sur le bouton valider le paiement, on reset le localstorage et le php prend la main grace au submit du bouton.
-    document.querySelector('#validatecart').addEventListener("click", cart.clear.bind(cart));  
+    if(document.querySelector('#validatecart')){
+        //  Au click sur le bouton valider le paiement, on reset le localstorage et le php prend la main grace au submit du bouton.
+        document.querySelector('#validatecart').addEventListener("click", cart.clear.bind(cart));  
+    }
+    
 
 });

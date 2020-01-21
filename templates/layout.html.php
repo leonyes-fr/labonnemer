@@ -35,7 +35,7 @@
                 <li><a href="index.php?controller=products&task=list&category=4">Ricard!</a></li>
             </ul>
         </nav>
-	</header>	
+	</header>
     <main class="container">
         <?= $pageContent ?>
     </main>

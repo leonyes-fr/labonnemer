@@ -1,3 +1,14 @@
+    <aside class="assistant">
+        <a href="#"> X</a>
+        <h1>Votre assistant personnel</h1> 
+        <img src="public/img/assistant/mermaid.jpg">
+        <!--<img src="public/img/assistant/1.png" id="chapeau">  bloque le X pourfermer ! !-->
+        <form>
+            <p>Bonjour, comment puis je vous aider?</p>
+            <textarea name="address" rows="4" cols="26"> </textarea>
+            <input type="submit" value="Posez votre question"/>
+        </form>
+    </aside>
 <article class="home">
     <h1>Découvrez les festins de la mer.</h1>
         <img src="public/img/slider/1.jpg" alt="Séléction de plats."  id="slider" class="slider"><br>

@@ -9,6 +9,13 @@ function infoBulle(){
     document.querySelector('figure + img').classList.toggle("visible");
 }
 
+// Fonction fermant l'assistant visible sur la page principale.
+function showAssistant(e){
+    e.preventDefault();
+    console.log('reussi');
+    document.querySelector('.assistant').classList.add("close");
+}
+
 // Affiche une modale demandant confirmation avant de supprimer le compte définitivement.
 function deleteAccount(e){
     e.preventDefault();
@@ -29,9 +36,12 @@ document.addEventListener('DOMContentLoaded', function(){
     //new cart sert à connaitre le nombre d'objets rajouté dans le panier sur le header.
     let cart = new Cart();
 
-    //--------- sélécteurs qui fait apparaitre / disparaitre la bulle sur le logo au survol, c'est ma grande fierté.. J'ai passé des heures à le "hover" ce logo... -------------------
+    //--------- sélécteurs qui fait apparaitre / disparaitre la bulle sur le logo au survol.
     document.querySelector('figure').addEventListener('mouseover',infoBulle);
     document.querySelector('figure').addEventListener('mouseout',infoBulle);
+
+    //--------- Sélécteur qui permet de fermer la fenetre d'aide de l'Assistant.
+    document.querySelector('.assistant a').addEventListener('click',showAssistant);
 
     if(document.querySelector('#deleteaccount'))
         {

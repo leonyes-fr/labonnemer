@@ -162,6 +162,62 @@ nav ul li:hover {
 	top: 0.5rem; 
 }
 
+
+/* --------------------------------------------------------------------------------------------------
+    ----------------------------------- VOTRE ASSISTANT PERSONNEL ------------------------------------
+-----------------------------------------------------------------------------------------------------*/
+
+.assistant {
+	background-color: #016fa0;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: none;
+	width: 270px;
+	height: 500px;
+	position: fixed;
+	top: 200px;
+	right:10px;
+	border-radius: 30px;
+	box-shadow: 1px 1px 12px #555;
+	padding-top: 1%;
+}
+
+.assistant h1{
+	font-size: 1.8rem;
+	color: white;
+}
+.assistant a{  /* faire les padding margin etc........*/
+	display:block;
+	font-size: 1.8rem;
+	color: red;
+	text-align: right;
+}
+
+.assistant p {
+	font-size: 1.5rem;
+	color: white;
+}
+
+.assistant input[type=submit]{
+	background-color: #fec72f;
+	color: white;
+	margin: 2%;
+	padding: 1%;
+	font-size: 1.5rem;
+	border-radius: 8px;
+	border: none;
+}
+
+#chapeau {
+	position: fixed;
+	top: 200px;
+	right:10px;
+}
+
+.close {
+	display: none;
+}
+
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- MAIN ------------------------------------------
 -----------------------------------------------------------------------------------------------------*/
@@ -232,7 +288,7 @@ h2:nth-child(even) {
 	background-color: #60b3d5;
 	margin: 0 auto;
 	text-align: center;
-	border-radius: 2%;
+	border-radius: 4px;
 	height: 20%;
 	margin: 1%;
 	overflow: hidden;
@@ -269,7 +325,7 @@ h2:nth-child(even) {
 	margin: 1%;
 	padding: 1%;
 	font-size: 2.5rem;
-	border-radius: 4%;
+	border-radius: 8px;
 }
 
 .products a { /* Liens a droite, spécifique a page produits.*/
@@ -349,14 +405,14 @@ h2:nth-child(even) {
 }
 
 /* Améliore l'apparence des boutons "submit" */
-.login input[type=submit] , .create input[type=submit] , .account input[type=submit], .cart input[type=submit]{
+.login input[type=submit] , .create input[type=submit] , .account input[type=submit], .cart input[type=submit] {
 	background-color: #fec72f;
 	color: white;
 	text-transform: uppercase;
 	margin: 2%;
 	padding: 1%;
 	font-size: 2.5rem;
-	border-radius: 4%;
+	border-radius: 8px;
 	border: none;
 }
 
@@ -388,7 +444,7 @@ line-height: 4;
 		width: 15%;
 		padding: 1%;
 		font-size: 2.5rem;
-		border-radius: 4%;
+		border-radius: 8px;
 		margin-bottom: 4%;
 		margin-top: 4%;
 }
