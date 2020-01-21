@@ -2,9 +2,10 @@
 	todo:
 	mouette qui passe de gauche a droite.
 	vérifier attaque injection js dans texte form
-	pouvoir supp son compte utilisateur le cloturer
 	pouvoir supp un article du panier
-	calculer le sum precis en tenant compte de la quantité de produits. modifer le sql
+	
+rajouter prix aussi sur le panier...
+
 */
 
 /* --------------------------------------------------------------------------------------------------
@@ -45,9 +46,14 @@ li {
 	list-style: none;
 }
 
+
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- HEADER ------------------------------------------
 -----------------------------------------------------------------------------------------------------*/
+
+.smallscreentitle{
+	display:none;
+}
 
 body header {
 	background-color: #016fa0;
@@ -93,7 +99,7 @@ aside ul li:hover {
 
 
 /* Permet au logo de se positionner au centre du menu. */
-aside + figure {
+figure {
 	position: absolute;
 	top: 0rem;
 	left: 40%;
@@ -101,7 +107,7 @@ aside + figure {
 	transition: top 0.3s ease-out;
 }
 
-aside + figure:hover {
+figure:hover {
 	top: 3rem;
 }
 
@@ -203,7 +209,7 @@ article h1:first-child {
 	line-height: 2;
 }
 
-strong {
+strong { /*Même si souvent interprété en gras par défaut sur les navigateur. */
 	font-style: bold;
 }
 
@@ -432,4 +438,45 @@ li {
 
 footer h3 {
 	color: #fec72f;
+}
+
+
+/* --------------------------------------------------------------------------------------------------
+----------------------------------------------- MEDIA QUERIES  -------------------------------------
+-----------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1024px) {
+	.smallscreentitle{
+		font-family: 'Bree Serif', serif;
+		display: inline;
+		color: white;
+	}
+
+	figure{
+		display: none;
+	}
+
+	nav ul li:nth-child(2) {
+		margin-right: 0%;
+	}
+
+	.products a {
+		float: none;
+	}
+
+	.products p {
+		margin: 0px 0 4% 2%;
+	}
+
+}
+
+
+@media screen and (max-width: 700px) {
+	.products em {
+		display: block;
+		margin-top: -3%;
+		margin-bottom: 5%;
+	}
+	
 }

@@ -19,9 +19,9 @@ function loadList(){
 
 // Fonction lancé au dom loaded, qui va afficher les produits rajouté au panier par l'utilisateur.
 function displayProducts(){
-    listProducts = loadList();
-    document.querySelector('.contentcart').innerHTML = '';
-    listProducts.forEach((element,index) => {
+    let total= 0;
+    listProducts = loadList(); //On charge
+    listProducts.forEach((element,index) => {  // Puis on boucle insert dans le html.
 
         document.querySelector('.contentcart').innerHTML +=
                 '<article class="products cartlist">'+
@@ -30,7 +30,9 @@ function displayProducts(){
                 ' Prix unitaire : '+ element.price + 'Euros.<strong> Prix total du lot : ' + (element.price * element.quantity) + ' Euros.<strong></p>'+
 
                 '</article>';
+                total = parseInt(total) + (parseInt(element.price)*parseInt(element.quantity));
     });
+    document.querySelector('.contentcart').innerHTML +='<strong>Le prix total de la commande est de '+ total +' Euros.</strong>'
 };
 
 

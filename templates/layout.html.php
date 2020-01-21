@@ -21,10 +21,12 @@
                 <li><a href="index.php?controller=cart">Mon panier : (<span id="cartcontent">0</span>)</a></li>
             </ul>	
         </aside>
+        <h1 class="smallscreentitle"><a href="index.php">La Bonne Mer</a></h1>
         <figure class="logo">
             <a href="index.php"><img src="public/img/visuals/logo.png" alt="logo la bonne mer"></a>
         </figure>
         <img src="public/img/visuals/bulle.png" class="visible" alt="bulle au survol du logo.">
+        
         <nav>
             <ul>
                 <li><a href="index.php?controller=products&task=list&category=1">Crustaces</a></li>

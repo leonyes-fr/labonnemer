@@ -11,7 +11,6 @@ function infoBulle(){
 
 // Affiche une modale demandant confirmation avant de supprimer le compte définitivement.
 function deleteAccount(e){
-    console.log("test");
     e.preventDefault();
     if( confirm("Etes-vous sur de vouloir supprimer votre compte?")){
         window.location.replace("index.php?controller=account&task=deleteuser");
@@ -34,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('figure').addEventListener('mouseover',infoBulle);
     document.querySelector('figure').addEventListener('mouseout',infoBulle);
 
-    document.querySelector('#deleteaccount').addEventListener("click",deleteAccount);
+    if(document.querySelector('#deleteaccount'))
+        {
+            document.querySelector('#deleteaccount').addEventListener("click",deleteAccount);
+        }
+
     
 });
