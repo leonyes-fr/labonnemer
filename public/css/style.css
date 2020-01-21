@@ -163,11 +163,11 @@ nav ul li:hover {
 	margin: 0 auto;
 	text-align: center;
 	text-transform: none;
-	width: 16%;
-	height: 60%;
+	width: 300px;
+	height: 550px;
 	min-width: 300px;
 	position: fixed;
-	top: 30%;
+	top: 300px;
 	right:10px;
 	border-radius: 30px;
 	box-shadow: 1px 1px 12px #555;
@@ -209,7 +209,7 @@ nav ul li:hover {
 
 #chapeau {  /* test provisoire---------------------------------------- !!!!!!!!! */
 	position: fixed;
-	top: 37%;
+	top: 368px;
 	right:10px;
 }
 
