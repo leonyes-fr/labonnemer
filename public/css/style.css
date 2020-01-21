@@ -1,12 +1,3 @@
-/* 
-	todo:
-	mouette qui passe de gauche a droite.
-	vérifier attaque injection js dans texte form
-	pouvoir supp un article du panier
-	
-rajouter prix aussi sur le panier...
-
-*/
 
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- GLOBAL ------------------------------------------
@@ -164,7 +155,7 @@ nav ul li:hover {
 
 
 /* --------------------------------------------------------------------------------------------------
-    ----------------------------------- VOTRE ASSISTANT PERSONNEL ------------------------------------
+    ----------------------------------- ASSISTANT PERSONNEL ------------------------------------
 -----------------------------------------------------------------------------------------------------*/
 
 .assistant {
@@ -172,25 +163,28 @@ nav ul li:hover {
 	margin: 0 auto;
 	text-align: center;
 	text-transform: none;
-	width: 270px;
-	height: 500px;
+	width: 16%;
+	height: 60%;
+	min-width: 300px;
 	position: fixed;
-	top: 200px;
+	top: 30%;
 	right:10px;
 	border-radius: 30px;
 	box-shadow: 1px 1px 12px #555;
-	padding-top: 1%;
+	padding-top: 0.4%;
 }
 
 .assistant h1{
 	font-size: 1.8rem;
 	color: white;
+	text-transform: uppercase;
 }
-.assistant a{  /* faire les padding margin etc........*/
+.assistant a {
 	display:block;
-	font-size: 1.8rem;
-	color: red;
+	font-size: 2.5rem;
+	color: white;
 	text-align: right;
+	margin-right: 8%;
 }
 
 .assistant p {
@@ -200,20 +194,26 @@ nav ul li:hover {
 
 .assistant input[type=submit]{
 	background-color: #fec72f;
+	text-transform: uppercase;
 	color: white;
-	margin: 2%;
-	padding: 1%;
+	margin: 2.5%;
+	padding: 2%;
 	font-size: 1.5rem;
 	border-radius: 8px;
 	border: none;
 }
 
-#chapeau {
+.assistant textarea {
+	width:80% ;
+}
+
+#chapeau {  /* test provisoire---------------------------------------- !!!!!!!!! */
 	position: fixed;
-	top: 200px;
+	top: 37%;
 	right:10px;
 }
 
+/* Sert a fermer l'assitant sirene  */
 .close {
 	display: none;
 }
@@ -525,6 +525,9 @@ footer h3 {
 		margin: 0px 0 4% 2%;
 	}
 
+	.assistant{
+		display: none;
+	}
 }
 
 

@@ -1,10 +1,10 @@
     <aside class="assistant">
         <a href="#"> X</a>
-        <h1>Votre assistant personnel</h1> 
-        <img src="public/img/assistant/mermaid.jpg">
-        <!--<img src="public/img/assistant/1.png" id="chapeau">  bloque le X pourfermer ! !-->
+        <h1>Votre assistant</h1> 
+        <img src="public/img/assistant/piratetest.png">
+        <img src="public/img/assistant/chapeauun.png" id="chapeau"> 
         <form>
-            <p>Bonjour, comment puis je vous aider?</p>
+            <p>Puis-je vous aider?</p>
             <textarea name="address" rows="4" cols="26"> </textarea>
             <input type="submit" value="Posez votre question"/>
         </form>
