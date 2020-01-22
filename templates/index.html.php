@@ -2,7 +2,8 @@
         <a href="#"> X</a>
         <h1>Votre assistant</h1> 
         <img src="public/img/assistant/piratetest.png">
-        <img src="public/img/assistant/chapeauun.png" id="chapeau"> 
+        <img src="public/img/assistant/hair/imageun.png" id="hair">
+        <img src="public/img/assistant/body/imageun.png" id="body"> 
         <form>
             <p>Puis-je vous aider?</p>
             <textarea name="address" rows="4" cols="26"> </textarea>
@@ -78,3 +79,4 @@
     </section>
 </article>
 <script src="../labonnemer/public/js/slider.js"></script>
+<script src="../labonnemer/public/js/assistant.js"></script>

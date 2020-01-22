@@ -208,10 +208,15 @@ nav ul li:hover {
 	width:80% ;
 }
 
-#chapeau {  /* test provisoire---------------------------------------- !!!!!!!!! */
+#hair {
 	position: fixed;
-	bottom: 165px;
+	bottom: 233px;
+	right:10px;
+}
 
+#body {
+	position: fixed;
+	bottom: 169px;
 	right:10px;
 }
 
