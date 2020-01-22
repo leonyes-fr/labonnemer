@@ -4,6 +4,8 @@
 let hair = "hair";
 let body = "body";
 let positionImg = 0;
+let positionHair = 0;
+let positionBody =0;
 let characterDetails = ['imageun.png','imagedeux.png','imagetrois.png'];
 
 /* --------------------------------------------------------------------------------------------------
@@ -12,13 +14,25 @@ let characterDetails = ['imageun.png','imagedeux.png','imagetrois.png'];
 
 // Va modifier l'image cheveux ou corps en png suivante dans le tableau.
 function slide(element) {
-    positionImg++;
-    if (positionImg > characterDetails.length - 1)
-    {
-        positionImg = 0;
+    if(element == "hair"){
+        positionHair++;
+            if (positionHair > characterDetails.length - 1)
+                {
+                    positionHair = 0;
+                }
+    positionImg = positionHair;
+    }else{
+        positionBody++;
+            if (positionBody > characterDetails.length - 1)
+                {
+                    positionBody = 0;
+                }
+    positionImg = positionBody;
     }
+    
     document.querySelector('#'+element).src = "public/img/assistant/" + element +'/'+ characterDetails[positionImg];
 }
+
 
 /* --------------------------------------------------------------------------------------------------
     -----------------------------------------------CODE PRINCIPAL ------------------------------------
