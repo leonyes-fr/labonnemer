@@ -16,14 +16,14 @@ class Create extends Controller {
         \Renderer::render('create', compact('pageTitle', 'errors', 'accountName', 'disconnect'));
     }
 
-    //Va rajouter un nouvel utilisateur en bdd via le modele correspondant (create).
+    //Va rajouter un nouvel utilisateur en bdd via le modele correspondant (create). htmlspecialchars protege des failles xss.
     public function adduser() {
         $errors= [];
-        $lastname = $_POST['lastname'];
-        $firstname = $_POST['firstname'];
-        $email = $_POST['email'];
-        $address = $_POST['address'];
-        $phone = $_POST['phone'];
+        $lastname = htmlspecialchars($_POST['lastname']);
+        $firstname = htmlspecialchars($_POST['firstname']);
+        $email = htmlspecialchars($_POST['email']);
+        $address = htmlspecialchars($_POST['address']);
+        $phone = htmlspecialchars($_POST['phone']);
         $accountName = $this->accountName;
         $disconnect = $this->disconnect;
         //série de controles de données avant leur persistance dans la table customer.

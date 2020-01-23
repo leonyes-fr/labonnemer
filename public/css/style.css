@@ -208,13 +208,15 @@ nav ul li:hover {
 	width:80% ;
 }
 
-#hair {
+#hair { 
+	/* hair de réponse de l'assistant.  a placer avec soin +++++++++++ */
 	position: fixed;
 	bottom: 233px;
 	right:10px;
 }
 
 #body {
+	/* body de l'assistant.  a placer avec soin +++++++++++ */
 	position: fixed;
 	bottom: 169px;
 	right:10px;
@@ -224,6 +226,32 @@ nav ul li:hover {
 .close {
 	display: none;
 }
+
+/* Bulle de réponse de l'assistant.  a placer avec soin +++++++++++ */
+.assistantanswerbulle{    /* ici il faudra mettre une bulle vide; a la bonne taille.*/
+	position: fixed;
+	bottom: 350px;
+	right:300px;
+}
+
+.assistantanswerwait {  /* ici il faudra mettre le gif a  la bonne taille.*/
+	position: fixed;
+	bottom: 400px;
+	right:350px;
+	width: 100px;;
+}
+
+.assistantanswerok{  /* ici il faudra mettre le texte et bien le placer.*/
+	position: fixed;
+	bottom: 350px;
+	right:300px;
+}
+
+.assistantanswerhidden { 
+	display: none;
+}
+
+
 
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------------------- MAIN ------------------------------------------

@@ -26,14 +26,14 @@ class Account extends Controller {
         }
     }
 
-    //Permet à un client, après quelque controles d'usage, de mettre à jour ses coordonnées.
+    //Permet à un client, après quelque controles d'usage et protections de failles xss, de mettre à jour ses coordonnées.
     public function updateuser(){
         $errors= [];
-        $lastname = $_POST['lastname'];
-        $firstname = $_POST['firstname'];
-        $email = $_POST['email'];
-        $address = $_POST['address'];
-        $phone = $_POST['phone'];
+        $lastname = htmlspecialchars($_POST['lastname']);
+        $firstname = htmlspecialchars($_POST['firstname']);
+        $email = htmlspecialchars($_POST['email']);
+        $address = htmlspecialchars($_POST['address']);
+        $phone = htmlspecialchars($_POST['phone']);
         $id = $_SESSION['user']['id'];
         $accountName = $this->accountName;
         $disconnect = $this->disconnect;
