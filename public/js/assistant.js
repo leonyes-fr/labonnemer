@@ -3,9 +3,11 @@
 -----------------------------------------------------------------------------------------------------*/
 let hair = "hair";
 let body = "body";
+let tail = "tail";
 let positionImg = 0;
 let positionHair = 0;
 let positionBody =0;
+let positionTail =0;
 let characterDetails = ['imageun.png','imagedeux.png','imagetrois.png'];
 
 /* --------------------------------------------------------------------------------------------------
@@ -21,13 +23,20 @@ function slide(element) {
                     positionHair = 0;
                 }
         positionImg = positionHair;
-    }else{
+    }else if (element == "body"){
         positionBody++;
             if (positionBody > characterDetails.length - 1)
                 {
                     positionBody = 0;
                 }
         positionImg = positionBody;
+    }else if(element == "tail"){
+        positionTail++;
+        if (positionTail > characterDetails.length - 1)
+                {
+                    positionTail = 0;
+                }
+                positionImg = positionTail;
     }
     
     document.querySelector('#'+element).src = "public/img/assistant/" + element +'/'+ characterDetails[positionImg];
@@ -60,9 +69,14 @@ document.addEventListener('DOMContentLoaded', function(){
         slide(hair);
     });
 
-    // Si on clic sur le corps de l'assistant cela le modifie.
+    // Si on clic sur la peau de l'assistante cela la modifie.
     document.querySelector('#body').addEventListener("click",function(){
         slide(body);
+    });
+
+    // Si on clic sur le corps de l'assistant cela le modifie.
+    document.querySelector('#tail').addEventListener("click",function(){
+        slide(tail);
     });
 
     document.querySelector('.assistantask').addEventListener("click",askMeAnything);

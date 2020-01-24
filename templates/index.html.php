@@ -1,12 +1,13 @@
     <aside class="assistant">
         <a href="#"> X</a>
         <h1>Votre assistant</h1> 
-        <img src="public/img/assistant/piratetest.png">
-        <img src="public/img/assistant/hair/imageun.png" id="hair">
+        <img src="public/img/assistant/mermaid.png">
         <img src="public/img/assistant/body/imageun.png" id="body">
+        <img src="public/img/assistant/tail/imageun.png" id="tail">
+        <img src="public/img/assistant/hair/imageun.png" id="hair">
         <img src="public/img/assistant/bulle.png" class="assistantanswerbulle assistantanswerhidden"> 
         <img src="public/img/assistant/wait.gif" class="assistantanswerwait assistantanswerhidden">
-        <img src="public/img/assistant/answer.jpg" class="assistantanswerok assistantanswerhidden">  
+        <img src="public/img/assistant/answer.png" class="assistantanswerok assistantanswerhidden">  
         <form>
             <p>Puis-je vous aider?</p>
             <textarea name="address" rows="4" cols="26"> </textarea>

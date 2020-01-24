@@ -211,15 +211,22 @@ nav ul li:hover {
 #hair { 
 	/* hair de réponse de l'assistant.  a placer avec soin +++++++++++ */
 	position: fixed;
-	bottom: 233px;
-	right:10px;
+	bottom: 309px;
+	right: 10px;
 }
 
 #body {
 	/* body de l'assistant.  a placer avec soin +++++++++++ */
 	position: fixed;
 	bottom: 169px;
-	right:10px;
+	right: 10px;
+}
+
+#tail {
+	/* body de l'assistant.  a placer avec soin +++++++++++ */
+	position: fixed;
+	bottom: 169px;
+	right: 10px;
 }
 
 /* Sert a fermer l'assitant sirene  */
@@ -230,21 +237,21 @@ nav ul li:hover {
 /* Bulle de réponse de l'assistant.  a placer avec soin +++++++++++ */
 .assistantanswerbulle{    /* ici il faudra mettre une bulle vide; a la bonne taille.*/
 	position: fixed;
-	bottom: 350px;
-	right:300px;
+	bottom: 330px;
+	right:220px;
 }
 
 .assistantanswerwait {  /* ici il faudra mettre le gif a  la bonne taille.*/
 	position: fixed;
-	bottom: 400px;
-	right:350px;
+	bottom: 430px;
+	right:300px;
 	width: 100px;;
 }
 
 .assistantanswerok{  /* ici il faudra mettre le texte et bien le placer.*/
 	position: fixed;
-	bottom: 350px;
-	right:300px;
+	bottom: 330px;
+	right:220px;
 }
 
 .assistantanswerhidden { 
@@ -369,15 +376,15 @@ h2:nth-child(even) {
 
 #slider-previous{
 	position: absolute;
-	top: 50%;
-	left: 20%;
+	top: 70%;
+	left: 45%;
 	font-size: 4rem;
 }
 
 #slider-next {
 	position: absolute;
-	top: 50%;
-	right: 20%;
+	top: 70%;
+	right: 45%;
 	font-size: 4rem;
 }
 
