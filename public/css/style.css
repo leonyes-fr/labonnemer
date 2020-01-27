@@ -42,7 +42,7 @@ li {
     ----------------------------------------------- HEADER ------------------------------------------
 -----------------------------------------------------------------------------------------------------*/
 
-.smallscreentitle{
+.smallscreentitle{  /*Titre en h1 qui apparait sur petit écran pour remplacer le logo.  */
 	display:none;
 }
 
@@ -108,7 +108,7 @@ figure + img {
 	left: 52%;
 }
 
-.visible {
+.visible {  /* La bulle est par défaut caché, apparait au survol du logo.  */
 	display: none;
 }
 
@@ -157,6 +157,8 @@ nav ul li:hover {
 /* --------------------------------------------------------------------------------------------------
     ----------------------------------- ASSISTANT PERSONNEL ------------------------------------
 -----------------------------------------------------------------------------------------------------*/
+
+/* Toute cette section est un simple gadget, la sirene "assistant personnel" qui répond de facon factice aux questions utilisateurs. */
 
 .assistant {
 	background-color: #016fa0;
@@ -209,21 +211,21 @@ nav ul li:hover {
 }
 
 #hair { 
-	/* hair de réponse de l'assistant.  a placer avec soin +++++++++++ */
+	/* hair Position des cheveux en fixed, quand on clic JS va charger l'image cheveux en png suivant. */
 	position: fixed;
 	bottom: 309px;
 	right: 10px;
 }
 
 #body {
-	/* body de l'assistant.  a placer avec soin +++++++++++ */
+	/* body de l'assistant.  idem que hair ci dessus */
 	position: fixed;
 	bottom: 169px;
 	right: 10px;
 }
 
 #tail {
-	/* body de l'assistant.  a placer avec soin +++++++++++ */
+	/* body de l'assistant. idem que hair ci dessus */
 	position: fixed;
 	bottom: 169px;
 	right: 10px;
@@ -234,21 +236,21 @@ nav ul li:hover {
 	display: none;
 }
 
-/* Bulle de réponse de l'assistant.  a placer avec soin +++++++++++ */
-.assistantanswerbulle{    /* ici il faudra mettre une bulle vide; a la bonne taille.*/
+/* Bulle de réponse de l'assistant.  */
+.assistantanswerbulle{ 
 	position: fixed;
 	bottom: 330px;
 	right:220px;
 }
 
-.assistantanswerwait {  /* ici il faudra mettre le gif a  la bonne taille.*/
+.assistantanswerwait {  /* Affiche un gif "trois petit point" pour faire patienter */
 	position: fixed;
 	bottom: 430px;
 	right:300px;
 	width: 100px;;
 }
 
-.assistantanswerok{  /* ici il faudra mettre le texte et bien le placer.*/
+.assistantanswerok{  /* Puis affiche une réponse factice dans la bulle..*/
 	position: fixed;
 	bottom: 330px;
 	right:220px;
@@ -307,7 +309,7 @@ article h1:first-child {
 	line-height: 2;
 }
 
-strong { /*Même si souvent interprété en gras par défaut sur les navigateur. */
+strong { /*Mis en gras même si souvent interprété en gras par défaut sur les navigateurs. */
 	font-style: bold;
 }
 
@@ -462,7 +464,7 @@ h2:nth-child(even) {
 line-height: 4;
 }
 
-/*Affiche les messages d'erreur en rouge.(login, inscription) */
+/*Affiche les messages d'erreur en rouge.(login, inscription, champs manquant etc...) */
 .create span, .login span, .account span {
 	display: block;
 	color:red;

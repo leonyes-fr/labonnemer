@@ -7,7 +7,7 @@ class Cart extends Model {
 
     protected $table = "cart";
 
-    // Controle que le prix dans le localstorage n'as pas était modifié par un petit futé. Retourne true si tout va bien, on pourra alors persister les données via addcart.
+    // Controle que le prix dans le localstorage n'a pas était altéré par le client. Retourne true si tout va bien, on pourra alors persister les données via addcart.
     public function checkprice($product , $price){
         $query = $this->pdo->prepare("SELECT * FROM product WHERE prod_id = :prod_id");
         $query->execute(['prod_id' => $product]);

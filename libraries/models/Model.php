@@ -14,7 +14,7 @@ abstract class Model
     }
 
     /**
-    * retourne la liste compléte des produits classés par date de création. Non usité pour l'instant. Vu sur divers tutos... avec des fonctions de tris possible, intéressant++
+    * retourne la liste compléte des produits classés par date de création. Non usité pour l'instant. Il s'agit de test d'apres tutos rencontrés...
     * 
     * @return array
     */

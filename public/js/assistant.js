@@ -14,7 +14,7 @@ let characterDetails = ['imageun.png','imagedeux.png','imagetrois.png'];
     ----------------------------------------------- FONCTIONS -------------------------------------
 -----------------------------------------------------------------------------------------------------*/
 
-// Va modifier l'image cheveux ou corps en recuperant le nom du png suivant dans le tableau.
+// Va modifier l'image cheveux, corps, queue en recuperant le nom du png suivant dans le tableau "characterDetails".
 function slide(element) {
     if(element == "hair"){
         positionHair++;
@@ -42,7 +42,7 @@ function slide(element) {
     document.querySelector('#'+element).src = "public/img/assistant/" + element +'/'+ characterDetails[positionImg];
 }
 
-//Fonction qui affiche une bulle de réponse aléatoire aux questions posées par l'utilisateur.
+//Fonction qui affiche une bulle de réponse aux questions posées par l'utilisateur.
 function askMeAnything(e){
     e.preventDefault();
     document.querySelector('.assistantanswerbulle').classList.toggle("assistantanswerhidden");
@@ -51,8 +51,8 @@ function askMeAnything(e){
      setTimeout(showAnswer, 3000); //On attend 3 secondes avant d'envoyer la réponse factice.'
 }
 
-function showAnswer(){
-    console.log("réussis");
+// On retire le gif trois petit points, et on affiche la réponse.
+function showAnswer(){ 
     document.querySelector('.assistantanswerwait').classList.toggle("assistantanswerhidden");
     document.querySelector('.assistantanswerok').classList.toggle("assistantanswerhidden");    
 }
@@ -74,11 +74,12 @@ document.addEventListener('DOMContentLoaded', function(){
         slide(body);
     });
 
-    // Si on clic sur le corps de l'assistant cela le modifie.
+    // Si on clic sur la queue de l'assistante cela la modifie.
     document.querySelector('#tail').addEventListener("click",function(){
         slide(tail);
     });
 
+    //Si on clic sur le bouton "posez votre question", la sirene "répondra".
     document.querySelector('.assistantask').addEventListener("click",askMeAnything);
 
 });

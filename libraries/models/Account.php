@@ -31,6 +31,7 @@ class Account extends Model {
         $_SESSION['user']= ['id'=>$id,'lastname'=>$lastname,'firstname'=>$firstname,'email'=>$email, 'address'=>$address, 'phone'=>$phone];
     }
 
+    // Fonction permettant au client de supprimer définitivement son compte.
     public function deleteUser($customerId){
         $query = $this->pdo->prepare("DELETE FROM customer WHERE cust_id = :cust_id");
         $query->execute(['cust_id' => $customerId]);
